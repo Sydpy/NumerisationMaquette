@@ -1,0 +1,66 @@
+<?xml version="1.0" ?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+<xs:complexType name="Maquette">
+</xs:complexType>
+
+<xs:complexType name="UF">
+</xs:complexType>
+
+<xs:complexType name="UFObligatoire">
+  <xs:complexContent>
+    <xs:extension base="UF">
+    </xs:extension>
+  </xs:complexContent>
+</xs:complexType>
+
+<xs:complexType name="UFChoix">
+  <xs:complexContent>
+    <xs:extension base="UF">
+    </xs:extension>
+  </xs:complexContent>
+</xs:complexType>
+
+<xs:complexType name="GrandDomaine">
+</xs:complexType>
+
+<xs:complexType name="UE">
+</xs:complexType>
+
+<xs:complexType name="Competence">
+</xs:complexType>
+
+<xs:complexType name="Epreuve">
+</xs:complexType>
+
+<xs:complexType name="Departement">
+</xs:complexType>
+
+<xs:complexType name="Personnel">
+</xs:complexType>
+
+<xs:complexType name="Promo">
+</xs:complexType>
+
+<xs:complexType name="PromoPreOrientation">
+  <xs:complexContent>
+    <xs:extension base="Promo">
+    </xs:extension>
+  </xs:complexContent>
+</xs:complexType>
+
+<xs:complexType name="PromoOrientation">
+  <xs:complexContent>
+    <xs:extension base="Promo">
+    </xs:extension>
+  </xs:complexContent>
+</xs:complexType>
+
+<xs:complexType name="PromoOrientationSpe">
+  <xs:complexContent>
+    <xs:extension base="PromoOrientation">
+    </xs:extension>
+  </xs:complexContent>
+</xs:complexType>
+
+</xs:schema>
