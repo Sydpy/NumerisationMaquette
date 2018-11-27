@@ -1,135 +1,174 @@
 <?xml version="1.0" ?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
 
-<xs:complexType name="Maquette">
-  <xs:sequence>
-    <xs:element name="Semestre" type="nbSemestre"/>
-    <xs:element name="NbUFAChoisir" type="xs:int"/>
-    <xs:element name="UFs" type="UF" maxOccurs="unbounded"/>
-  </xs:sequence>
-</xs:complexType>
+  <xs:complexType name="Maquette">
+    <xs:sequence>
+      <xs:element name="Semestre">
+        <xs:simpleType>
+          <xs:restriction base="xs:integer">
+            <xs:minInclusive value="1"/>
+            <xs:maxInclusive value="10"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="NbUFAChoisir" type="xs:int"/>
+      <xs:element name="UFs">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="UF" type="UF" maxOccurs="unbounded"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+    <xs:attribute name="ID" type="xs:ID"/>
+  </xs:complexType>
 
-<xs:simpleType name="nbSemestre">
-  <xs:restriction base="xs:int">
-    <xs:minInclusive value="1"/>
-    <xs:maxInclusive value="12"/>
-  </xs:restriction>
-</xs:simpleType>
+  <xs:complexType name="UF">
+    <xs:sequence>
+      <xs:element name="Intitulé" type="xs:string"/>
+      <xs:element name="Hétérogène" type="xs:boolean"/>
+      <xs:element name="ECTS" type="xs:float"/>
+      <xs:element name="ParCompétences" type="xs:boolean"/>
+      <!-- FAUT QUE CE SOIT UNE REF VERS GrandDomaine-->
+      <xs:element name="GdDomaine" type="GrandDomaine" minOccurs="0" />
+      <!-- FAUT QUE CE SOIT UNE REF VERS PERSONNEL-->
+      <xs:element name="Responsable" type="Personnel"/>
+      <xs:element name="UEs">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="UE" type="UE" maxOccurs="unbounded"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+    <xs:attribute name="Code" type="xs:ID"/>
+  </xs:complexType>
 
-<xs:complexType name="UF">
-  <xs:sequence>
-    <xs:element name="Intitulé" type="xs:string"/>
-    <xs:element name="Hétérogène" type="xs:boolean"/>
-    <xs:element name="ECTS" type="xs:float"/>
-    <xs:element name="ParCompétences" type="xs:boolean"/>
-    <xs:element name="GdDomaine" type="GrandDomaine" minOccurs="0" />
-    <xs:element name="Responsable" type="Personnel"/>
-    <xs:element name="UEs" type="UE" maxOccurs="unbounded"/>
-  </xs:sequence>
-  <xs:attribute name="Code" type="xs:ID"/>
-</xs:complexType>
+  <xs:complexType name="UFObligatoire">
+    <xs:complexContent>
+      <xs:extension base="UF">
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
 
-<xs:complexType name="UFObligatoire">
-  <xs:complexContent>
-    <xs:extension base="UF">
-    </xs:extension>
-  </xs:complexContent>
-</xs:complexType>
+  <xs:complexType name="UFChoix">
+    <xs:complexContent>
+      <xs:extension base="UF">
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
 
-<xs:complexType name="UFChoix">
-  <xs:complexContent>
-    <xs:extension base="UF">
-    </xs:extension>
-  </xs:complexContent>
-</xs:complexType>
+  <xs:complexType name="GrandDomaine">
+    <xs:sequence>
+      <xs:element name="Intitulé" type="xs:string"/>
+    </xs:sequence>
+    <xs:attribute name="ID" type="xs:ID"/>
+  </xs:complexType>
 
-<xs:complexType name="GrandDomaine">
-  <xs:sequence>
-    <xs:element name="Intitulé" type="xs:string"/>
-    <xs:element name="UFs" type="UF" maxOccurs="unbounded"/>
-  </xs:sequence>
-</xs:complexType>
+  <xs:complexType name="UE">
+    <xs:sequence>
+      <xs:element name="Intitulé" type="xs:string"/>
+      <xs:element name="Coefficient" type="xs:float"/>
+      <xs:element name="ParCompétences" type="xs:boolean"/>
+      <!-- FAUT QUE CE SOIT UNE REF VERS PERSONNEL-->
+      <xs:element name="Responsable" type="Personnel"/>
+      <xs:element name="HeuresCM" type="xs:float"/>
+      <xs:element name="HeuresTD" type="xs:float"/>
+      <xs:element name="HeuresTP" type="xs:float"/>
 
-<xs:complexType name="UE">
-  <xs:sequence>
-    <xs:element name="Intitulé" type="xs:string"/>
-    <xs:element name="Coefficient" type="xs:float"/>
-    <xs:element name="ParCompétences" type="xs:boolean"/>
-    <xs:element name="Responsable" type="Personnel" maxOccurs="unbounded"/>
-    <xs:element name="HeuresCM" type="xs:float"/>
-    <xs:element name="HeuresTD" type="xs:float"/>
-    <xs:element name="HeuresTP" type="xs:float"/>
-    <xs:element name="Compétences" type="Competence" minOccurs="0" maxOccurs="unbounded"/>
-    <xs:element name="Epreuves" type="Epreuve" maxOccurs="unbounded"/>
-  </xs:sequence>
-  <xs:attribute name="Code" type="xs:ID"/>
-</xs:complexType>
+      <xs:element name="Compétences">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="Compétence" type="Compétence" maxOccurs="unbounded"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
 
-<xs:complexType name="Competence">
-  <xs:sequence>
-    <xs:element name="Intitulé" type="xs:string"/>
-  </xs:sequence>
-</xs:complexType>
+      <xs:element name="Épreuves">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="Épreuve" type="Épreuve" maxOccurs="unbounded"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
 
-<xs:complexType name="Epreuve">
-  <xs:sequence>
-    <xs:element name="Intitulé" type="xs:string"/>
-    <xs:element name="Coefficient" type="xs:float"/>
-  </xs:sequence>
-</xs:complexType>
+    </xs:sequence>
+    <xs:attribute name="Code" type="xs:ID"/>
+  </xs:complexType>
 
-<xs:complexType name="Departement">
-  <xs:sequence>
-    <xs:element name="Nom" type="xs:string"/>
-    <xs:element name="DateCréation" type="xs:date"/>
-    <xs:element name="Directeur(s)" type="Personnel" />
-  </xs:sequence>
-  <xs:attribute name="Acronyme" type="xs:ID"/>
-</xs:complexType>
+  <xs:complexType name="Compétence">
+    <xs:sequence>
+      <xs:element name="Intitulé" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
 
-<!-- Faire les types pour Téléphone, mail, Bureau, grade ?! !-->
-<xs:complexType name="Personnel">
-  <xs:sequence>
-    <xs:element name="Nom" type="xs:string"/>
-    <xs:element name="Prénom" type="xs:string"/>
-    <xs:element name="Grade" type="xs:string"/>
-    <xs:element name="Bureau" type="xs:string"/>
-    <xs:element name="Mail" type="xs:string"/>
-    <xs:element name="Téléphone" type="xs:string"/>
-    <xs:element name="Département" type="Departement" minOccurs="0"/>
-  </xs:sequence>
-</xs:complexType>
+  <xs:complexType name="Épreuve">
+    <xs:sequence>
+      <xs:element name="Intitulé" type="xs:string"/>
+      <xs:element name="Coefficient" type="xs:float"/>
+    </xs:sequence>
+  </xs:complexType>
 
-<xs:complexType name="Promo">
-  <xs:sequence>
-    <xs:element name="Année" type="xs:int"/>
-    <xs:element name="Maquettes" type="Maquette" minOccurs="0" maxOccurs="2"/>
-    <xs:element name="Département" type="Departement"/>
-  </xs:sequence>
-</xs:complexType>
+  <xs:complexType name="Département">
+    <xs:sequence>
+      <xs:element name="Nom" type="xs:string"/>
+      <xs:element name="DateCréation" type="xs:date"/>
+      <!-- FAUT QUE CE SOIT UNE REF VERS PERSONNEL-->
+      <xs:element name="Directeur" type="Personnel" />
+    </xs:sequence>
+    <xs:attribute name="Acronyme" type="xs:ID"/>
+  </xs:complexType>
 
-<xs:complexType name="PromoPreOrientation">
-  <xs:complexContent>
-    <xs:extension base="Promo">
-      <xs:element name="PréOrientation" type="xs:string"/>
-    </xs:extension>
-  </xs:complexContent>
-</xs:complexType>
+  <xs:complexType name="Personnel">
+    <xs:sequence>
+      <xs:element name="Nom" type="xs:string"/>
+      <xs:element name="Prénom" type="xs:string"/>
+      <xs:element name="Grade" type="xs:string"/>
+      <xs:element name="Bureau" type="xs:string"/>
+      <xs:element name="Mail" type="xs:string"/>
+      <xs:element name="Téléphone" type="xs:string"/>
+    </xs:sequence>
+    <xs:attribute name="ID" type="xs:ID"/>
+  </xs:complexType>
 
-<xs:complexType name="PromoOrientation">
-  <xs:complexContent>
-    <xs:extension base="Promo">
-      <xs:element name="Orientation" type="xs:string"/>
-    </xs:extension>
-  </xs:complexContent>
-</xs:complexType>
+  <xs:complexType name="Promo">
+    <xs:sequence>
+      <xs:element name="Année" type="xs:int"/>
+      <!-- FAUT QUE CE SOIT UNE REF VERS DEPARTEMENT-->
+      <xs:element name="Département" type="Departement"/>
+      <xs:element name="Maquettes">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="Maquette" type="Maquette" maxOccurs="unbounded"/>
+          </xs:sequence>
+        </xs:complexType> 
+      </xs:element>
+    </xs:sequence>
+    <xs:attribute name="ID" type="xs:ID"/>
+  </xs:complexType>
 
-<xs:complexType name="PromoOrientationSpe">
-  <xs:complexContent>
-    <xs:extension base="PromoOrientation">
-      <xs:element name="Spécialité" type="xs:string"/>
-    </xs:extension>
-  </xs:complexContent>
-</xs:complexType>
+  <xs:complexType name="PromoPreOrientation">
+    <xs:complexContent>
+      <xs:extension base="Promo">
+        <xs:element name="PréOrientation" type="xs:string"/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="PromoOrientation">
+    <xs:complexContent>
+      <xs:extension base="Promo">
+        <xs:element name="Orientation" type="xs:string"/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="PromoOrientationSpe">
+    <xs:complexContent>
+      <xs:extension base="PromoOrientation">
+        <xs:element name="Spécialité" type="xs:string"/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
 
 </xs:schema>
