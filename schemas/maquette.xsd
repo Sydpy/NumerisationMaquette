@@ -2,27 +2,34 @@
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
   targetNamespace="https://raw.githubusercontent.com/Sydpy/NumerisationMaquette/master/schemas">
 
-  <xs:complexType name="Maquette">
-    <xs:sequence>
-      <xs:element name="Semestre">
-        <xs:simpleType>
-          <xs:restriction base="xs:integer">
-            <xs:minInclusive value="1"/>
-            <xs:maxInclusive value="10"/>
-          </xs:restriction>
-        </xs:simpleType>
-      </xs:element>
-      <xs:element name="NbUFAChoisir" type="xs:int"/>
-      <xs:element name="UFs">
-        <xs:complexType>
-          <xs:sequence>
-            <xs:element name="UF" type="UF" maxOccurs="unbounded"/>
-          </xs:sequence>
-        </xs:complexType>
-      </xs:element>
-    </xs:sequence>
-    <xs:attribute name="ID" type="xs:ID"/>
-  </xs:complexType>
+  <xs:element name="Maquette">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="Semestre">
+          <xs:simpleType>
+            <xs:restriction base="xs:integer">
+              <xs:minInclusive value="1"/>
+              <xs:maxInclusive value="10"/>
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:element>
+        <xs:element name="NbUFAChoisir" type="xs:int"/>
+
+        <xs:element name="UFs">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="UF" type="UF" maxOccurs="unbounded"/>
+            </xs:sequence>
+          </xs:complexType>
+          <xs:key name="UFCode">
+            <xs:selector xpath="./UF"/>
+            <xs:field xpath="@code"/>
+          </xs:key>
+        </xs:element>
+      
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
 
   <xs:complexType name="UF">
     <xs:sequence>
@@ -34,6 +41,7 @@
       <xs:element name="GdDomaine" type="GrandDomaine" minOccurs="0" />
       <!-- FAUT QUE CE SOIT UNE REF VERS PERSONNEL-->
       <xs:element name="Responsable" type="Personnel"/>
+
       <xs:element name="UEs">
         <xs:complexType>
           <xs:sequence>
@@ -41,8 +49,9 @@
           </xs:sequence>
         </xs:complexType>
       </xs:element>
+
     </xs:sequence>
-    <xs:attribute name="Code" type="xs:ID"/>
+    <xs:attribute name="code" type="xs:ID"/>
   </xs:complexType>
 
   <xs:complexType name="UFObligatoire">

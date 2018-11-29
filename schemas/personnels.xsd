@@ -8,6 +8,10 @@
         <xs:element name="Personnel" type="Personnel" minOccurs="0" maxOccurs="unbounded"/>
       </xs:sequence>
     </xs:complexType>
+    <xs:key name="PersonnelID">
+      <xs:selector xpath="./Personnel"/>
+      <xs:field xpath="@id"/>
+    </xs:key>
   </xs:element>
 
   <xs:complexType name="Personnel">
@@ -19,7 +23,7 @@
       <xs:element name="Mail" type="xs:string"/>
       <xs:element name="Téléphone" type="xs:string"/>
     </xs:sequence>
-    <xs:attribute name="ID" type="xs:ID"/>
+    <xs:attribute name="id" type="xs:ID"/>
   </xs:complexType>
 
 </xs:schema>

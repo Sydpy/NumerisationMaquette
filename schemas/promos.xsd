@@ -8,11 +8,15 @@
         <xs:element name="Promo" type="Promo" minOccurs="0" maxOccurs="unbounded"/>
       </xs:sequence>
     </xs:complexType>
+    <xs:key name="PromoID">
+      <xs:selector xpath="./Promo"/>
+      <xs:field xpath="@id"/>
+    </xs:key>
   </xs:element>
 
   <xs:complexType name="Promo">
     <xs:sequence>
-      <xs:element name="Année" type="xs:int"/>
+      <xs:element name="Année" type="xs:integer"/>
       <!-- FAUT QUE CE SOIT UNE REF VERS DEPARTEMENT-->
       <xs:element name="Département" type="Departement"/>
       <xs:element name="Maquettes">
@@ -23,7 +27,7 @@
         </xs:complexType> 
       </xs:element>
     </xs:sequence>
-    <xs:attribute name="ID" type="xs:ID"/>
+    <xs:attribute name="id" type="xs:ID" use="required"/>
   </xs:complexType>
 
   <xs:complexType name="PromoPreOrientation">

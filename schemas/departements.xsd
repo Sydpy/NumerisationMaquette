@@ -8,6 +8,10 @@
         <xs:element name="Département" type="Département" minOccurs="0" maxOccurs="unbounded"/>
       </xs:sequence>
     </xs:complexType>
+    <xs:key name="DépartementAcronyme">
+      <xs:selector xpath="./Département"/>
+      <xs:field xpath="@acronyme"/>
+    </xs:key>
   </xs:element>
   
   <xs:complexType name="Département">
@@ -17,7 +21,7 @@
       <!-- FAUT QUE CE SOIT UNE REF VERS PERSONNEL-->
       <xs:element name="Directeur" type="Personnel" />
     </xs:sequence>
-    <xs:attribute name="Acronyme" type="xs:ID"/>
+    <xs:attribute name="acronyme" type="xs:ID" use="required"/>
   </xs:complexType>
 
 </xs:schema>
