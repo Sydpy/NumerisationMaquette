@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="Utf-8"?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+  targetNamespace="https://raw.githubusercontent.com/Sydpy/NumerisationMaquette/master/schemas">
   
   <xs:element name="GrandsDomaines">
     <xs:complexType>
