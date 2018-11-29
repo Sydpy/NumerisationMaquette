@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="Utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  
+  <xs:element name="GrandsDomaines">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="GrandDomaine" type="GrandDomaine" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  
+  <xs:complexType name="GrandDomaine">
+    <xs:sequence>
+      <xs:element name="Intitulé" type="xs:string"/>
+    </xs:sequence>
+    <xs:attribute name="ID" type="xs:ID"/>
+  </xs:complexType>
+
+</xs:schema>

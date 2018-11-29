@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="Utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  
+  <xs:element name="Personnels">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="Personnel" type="Personnel" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:complexType name="Personnel">
+    <xs:sequence>
+      <xs:element name="Nom" type="xs:string"/>
+      <xs:element name="Prénom" type="xs:string"/>
+      <xs:element name="Grade" type="xs:string"/>
+      <xs:element name="Bureau" type="xs:string"/>
+      <xs:element name="Mail" type="xs:string"/>
+      <xs:element name="Téléphone" type="xs:string"/>
+    </xs:sequence>
+    <xs:attribute name="ID" type="xs:ID"/>
+  </xs:complexType>
+
+</xs:schema>

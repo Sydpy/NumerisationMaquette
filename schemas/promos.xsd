@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="Utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:element name="Promos">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="Promo" type="Promo" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:complexType name="Promo">
+    <xs:sequence>
+      <xs:element name="Année" type="xs:int"/>
+      <!-- FAUT QUE CE SOIT UNE REF VERS DEPARTEMENT-->
+      <xs:element name="Département" type="Departement"/>
+      <xs:element name="Maquettes">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="Maquette" type="Maquette" maxOccurs="unbounded"/>
+          </xs:sequence>
+        </xs:complexType> 
+      </xs:element>
+    </xs:sequence>
+    <xs:attribute name="ID" type="xs:ID"/>
+  </xs:complexType>
+
+  <xs:complexType name="PromoPreOrientation">
+    <xs:complexContent>
+      <xs:extension base="Promo">
+        <xs:element name="PréOrientation" type="xs:string"/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="PromoOrientation">
+    <xs:complexContent>
+      <xs:extension base="Promo">
+        <xs:element name="Orientation" type="xs:string"/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="PromoOrientationSpe">
+    <xs:complexContent>
+      <xs:extension base="PromoOrientation">
+        <xs:element name="Spécialité" type="xs:string"/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+
+
+</xs:schema>

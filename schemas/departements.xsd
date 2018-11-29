@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="Utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  
+  <xs:element name="Départements">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="Département" type="Département" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  
+  <xs:complexType name="Département">
+    <xs:sequence>
+      <xs:element name="Nom" type="xs:string"/>
+      <xs:element name="DateCréation" type="xs:date"/>
+      <!-- FAUT QUE CE SOIT UNE REF VERS PERSONNEL-->
+      <xs:element name="Directeur" type="Personnel" />
+    </xs:sequence>
+    <xs:attribute name="Acronyme" type="xs:ID"/>
+  </xs:complexType>
+
+</xs:schema>
