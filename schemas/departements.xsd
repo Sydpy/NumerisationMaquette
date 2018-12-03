@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="Utf-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
   targetNamespace="https://raw.githubusercontent.com/Sydpy/NumerisationMaquette/master/schemas">
+
+  <xs:include schemaLocation="https://raw.githubusercontent.com/Sydpy/NumerisationMaquette/master/schemas/personnels.xsd"/>
   
   <xs:element name="Départements">
     <xs:complexType>
@@ -12,14 +14,16 @@
       <xs:selector xpath="./Département"/>
       <xs:field xpath="@acronyme"/>
     </xs:key>
+    <xsd:keyref name="DirecteurRef" refer="PersonnelID"> 
+      <xsd:selector xpath="./Département/Directeur"/> 
+    </xsd:keyref> 
   </xs:element>
-  
+
   <xs:complexType name="Département">
     <xs:sequence>
       <xs:element name="Nom" type="xs:string"/>
       <xs:element name="DateCréation" type="xs:date"/>
-      <!-- FAUT QUE CE SOIT UNE REF VERS PERSONNEL-->
-      <xs:element name="Directeur" type="Personnel" />
+      <xs:element name="Directeur" type="xs:ID" />
     </xs:sequence>
     <xs:attribute name="acronyme" type="xs:ID" use="required"/>
   </xs:complexType>
