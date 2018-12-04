@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<grandsDomaines xmlns:xs="http://www.w3.org/2001/XMLSchema-instance"
+  xs:noNamespaceSchemaLocation="::/schemas/grandsDomaines.xsd">
+    <grandDomaine>
+        <Intitulé>Sciences appliquéesr</Intitulé>
+        <id>1</id>
+    </grandDomaine>
+    <grandDomaine>
+        <Intitulé>APS MO PPI</Intitulé>
+        <id>2</id>
+    </grandDomaine>
+    <grandDomaine>
+        <Intitulé>Sciences humaines</Intitulé>
+        <id>3</id>
+    </grandDomaine>
+</grandsDomaines>
