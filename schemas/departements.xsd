@@ -1,22 +1,27 @@
 <?xml version="1.0" encoding="Utf-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
-  targetNamespace="https://raw.githubusercontent.com/Sydpy/NumerisationMaquette/master/schemas">
+  elementFormDefault="qualified"
+  targetNamespace="departements" 
+  xmlns="departements"
+  xmlns:d="departements"
+  xmlns:p="personnels">
 
-  <xs:include schemaLocation="https://raw.githubusercontent.com/Sydpy/NumerisationMaquette/master/schemas/personnels.xsd"/>
+  <xs:import namespace="personnels" schemaLocation="personnels.xsd"/>
   
   <xs:element name="Départements">
     <xs:complexType>
       <xs:sequence>
-        <xs:element name="Département" type="Département" minOccurs="0" maxOccurs="unbounded"/>
+        <xs:element name="Département" type="d:Département" minOccurs="0" maxOccurs="unbounded"/>
       </xs:sequence>
     </xs:complexType>
     <xs:key name="DépartementAcronyme">
       <xs:selector xpath="./Département"/>
       <xs:field xpath="@acronyme"/>
     </xs:key>
-    <xsd:keyref name="DirecteurRef" refer="PersonnelID"> 
-      <xsd:selector xpath="./Département/Directeur"/> 
-    </xsd:keyref> 
+    <xs:keyref name="DirecteurRef" refer="p:PersonnelID"> 
+      <xs:selector xpath="./Département/Directeur"/> 
+      <xs:field xpath="."/>
+    </xs:keyref> 
   </xs:element>
 
   <xs:complexType name="Département">
