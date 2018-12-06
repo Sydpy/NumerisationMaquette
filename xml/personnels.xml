@@ -1,8 +1,7 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="UTF-8"?>
 
-<Personnels xmlns="https://www.w3schools.com"
-xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-xsi:schemaLocation="https://www.w3schools.com ../schemas/schema.xsd">
+<Personnels xmlns:xs="http://www.w3.org/2001/XMLSchema-instance"
+    xs:noNamespaceSchemaLocation="::/schemas/personnels.xsd">
 
 <Personnel ID="guermouc">
     <Nom>Guermouche</Nom>
