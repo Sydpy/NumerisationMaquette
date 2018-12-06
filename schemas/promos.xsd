@@ -18,7 +18,7 @@
     <xs:sequence>
       <xs:element name="Année" type="xs:integer"/>
       <!-- FAUT QUE CE SOIT UNE REF VERS DEPARTEMENT-->
-      <xs:element name="Département" type="Departement"/>
+      <xs:element name="Département" type="xs:ID"/>
       <xs:element name="Maquettes">
         <xs:complexType>
           <xs:sequence>
@@ -53,7 +53,5 @@
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
-
-
 
 </xs:schema>

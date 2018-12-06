@@ -37,10 +37,9 @@
       <xs:element name="Hétérogène" type="xs:boolean"/>
       <xs:element name="ECTS" type="xs:float"/>
       <xs:element name="ParCompétences" type="xs:boolean"/>
-      <!-- FAUT QUE CE SOIT UNE REF VERS GrandDomaine-->
-      <xs:element name="GdDomaine" type="GrandDomaine" minOccurs="0" />
-      <!-- FAUT QUE CE SOIT UNE REF VERS PERSONNEL-->
-      <xs:element name="Responsable" type="Personnel"/>
+      <!-- FAUT QUE CE SOIT UNE REF VERS GRANDDOMAINE-->
+      <xs:element name="GdDomaine" type="xs:ID" minOccurs="0" />
+      <xs:element name="Responsable" type="xs:ID"/>
 
       <xs:element name="UEs">
         <xs:complexType>
@@ -74,7 +73,7 @@
       <xs:element name="Coefficient" type="xs:float"/>
       <xs:element name="ParCompétences" type="xs:boolean"/>
       <!-- FAUT QUE CE SOIT UNE REF VERS PERSONNEL-->
-      <xs:element name="Responsable" type="Personnel"/>
+      <xs:element name="Responsable" type="xs:ID"/>
       <xs:element name="HeuresCM" type="xs:float"/>
       <xs:element name="HeuresTD" type="xs:float"/>
       <xs:element name="HeuresTP" type="xs:float"/>

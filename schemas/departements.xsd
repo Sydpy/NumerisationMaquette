@@ -18,16 +18,13 @@
       <xs:selector xpath="./Département"/>
       <xs:field xpath="@acronyme"/>
     </xs:key>
-    <xs:keyref name="DirecteurRef" refer="p:PersonnelID"> 
-      <xs:selector xpath="./Département/Directeur"/> 
-      <xs:field xpath="."/>
-    </xs:keyref> 
   </xs:element>
 
   <xs:complexType name="Département">
     <xs:sequence>
       <xs:element name="Nom" type="xs:string"/>
       <xs:element name="DateCréation" type="xs:date"/>
+      <!-- FAUT QUE CE SOIT UNE REF VERS PERSONNEL -->
       <xs:element name="Directeur" type="xs:ID" />
     </xs:sequence>
     <xs:attribute name="acronyme" type="xs:ID" use="required"/>
