@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="Utf-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
-  targetNamespace="https://raw.githubusercontent.com/Sydpy/NumerisationMaquette/master/schemas">
+  elementFormDefault="qualified"
+  targetNamespace="personnels"
+  xmlns="personnels"
+  xmlns:p="personnels">
   
   <xs:element name="Personnels">
     <xs:complexType>
@@ -9,7 +12,7 @@
       </xs:sequence>
     </xs:complexType>
     <xs:key name="PersonnelID">
-      <xs:selector xpath="./Personnel"/>
+      <xs:selector xpath="p:Personnel"/>
       <xs:field xpath="@id"/>
     </xs:key>
   </xs:element>

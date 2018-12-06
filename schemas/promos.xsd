@@ -21,6 +21,13 @@
     <xs:sequence>
       <xs:element name="Année" type="xs:integer"/>
       <xs:element name="Département" type="xs:ID"/>
+      <xs:element name="Maquettes">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="Maquette" type="Maquette" maxOccurs="unbounded"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
       <xs:choice>
         <xs:element name="PréOrientation" type="xs:string" minOccurs="0"/>
         <xs:element name="Orientation"  minOccurs="0">

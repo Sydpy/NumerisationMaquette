@@ -1,44 +1,45 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<departements xmlns:xs="http://www.w3.org/2001/XMLSchema-instance"
-  xs:noNamespaceSchemaLocation="::/schemas/departements.xsd">
-  <departement Acronyme="STPI">
-    <nom>Sciences et Technologies Pour l'Ingénieur</nom>
+<?xml version="1.0" encoding="utf-8"?>
+<Départements xmlns="departements"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="departements ../schemas/departements.xsd">
+  <Département acroyme="STPI">
+    <Nom>Sciences et Technologies Pour l'Ingénieur</Nom>
     <DateCréation>1963-12-01</DateCréation>
     <Directeur></Directeur>
-  </departement>
-  <departement Acronyme="GMM">
-    <nom>Génie Mathématique et Modélisation</nom>
+  </Département>
+  <Département acroyme="GMM">
+    <Nom>Génie Mathématique et Modélisation</Nom>
     <DateCréation>1963-12-01</DateCréation>
     <Directeur></Directeur>
-  </departement>
-  <departement Acronyme="GC">
-    <nom>Génie Civil</nom>
+  </Département>
+  <Département acroyme="GC">
+    <Nom>Génie Civil</Nom>
     <DateCréation>1963-12-01</DateCréation>
     <Directeur></Directeur>
-  </departement>
-  <departement Acronyme="GB">
-    <nom>Génie Biochimique</nom>
+  </Département>
+  <Département acroyme="GB">
+    <Nom>Génie Biochimique</Nom>
     <DateCréation>1963-12-01</DateCréation>
     <Directeur></Directeur>
-  </departement>
-  <departement Acronyme="GM">
-    <nom>Génie Mécanique</nom>
+  </Département>
+  <Département acroyme="GM">
+    <Nom>Génie Mécanique</Nom>
     <DateCréation>1963-12-01</DateCréation>
     <Directeur></Directeur>
-  </departement>
-  <departement Acronyme="GP">
-    <nom>Génie Physique</nom>
+  </Département>
+  <Département acroyme="GP">
+    <Nom>Génie Physique</Nom>
     <DateCréation>1963-12-01</DateCréation>
     <Directeur></Directeur>
-  </departement>
-  <departement Acronyme="GPE">
-    <nom>Génie des Procédés et Environnement</nom>
+  </Département>
+  <Département acroyme="GPE">
+    <Nom>Génie des Procédés et Environnement</Nom>
     <DateCréation>1963-12-01</DateCréation>
     <Directeur></Directeur>
-  </departement>
-  <departement Acronyme="GEI">
-    <nom>Génie Electrique et Informatique</nom>
+  </Département>
+  <Département acroyme="GEI">
+    <Nom>Génie Electrique et Informatique</Nom>
     <DateCréation>1963-12-01</DateCréation>
     <Directeur></Directeur>
-  </departement>
-</departements>
+  </Département>
+</Départements>
