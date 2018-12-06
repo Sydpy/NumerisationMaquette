@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="Utf-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
-  targetNamespace="https://raw.githubusercontent.com/Sydpy/NumerisationMaquette/master/schemas">
+  elementFromDefault="qualified"
+  xmlns="promos"
+  xmlns:p="promos"
+  targetNamespace="promos">
 
   <xs:element name="Promos">
     <xs:complexType>
@@ -17,43 +20,19 @@
   <xs:complexType name="Promo">
     <xs:sequence>
       <xs:element name="Année" type="xs:integer"/>
-      <!-- FAUT QUE CE SOIT UNE REF VERS DEPARTEMENT-->
-      <xs:element name="Département" type="Departement"/>
-      <xs:element name="Maquettes">
-        <xs:complexType>
-          <xs:sequence>
-            <xs:element name="Maquette" type="Maquette" maxOccurs="unbounded"/>
-          </xs:sequence>
-        </xs:complexType> 
-      </xs:element>
+      <xs:element name="Département" type="xs:ID"/>
+      <xs:choice>
+        <xs:element name="PréOrientation" type="xs:string" minOccurs="0"/>
+        <xs:element name="Orientation"  minOccurs="0">
+          <xs:complexType mixed="true">
+            <xs:sequence>
+              <xs:element name="Spécialité" type="xs:string" minOccurs="0"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
     </xs:sequence>
     <xs:attribute name="id" type="xs:ID" use="required"/>
   </xs:complexType>
-
-  <xs:complexType name="PromoPreOrientation">
-    <xs:complexContent>
-      <xs:extension base="Promo">
-        <xs:element name="PréOrientation" type="xs:string"/>
-      </xs:extension>
-    </xs:complexContent>
-  </xs:complexType>
-
-  <xs:complexType name="PromoOrientation">
-    <xs:complexContent>
-      <xs:extension base="Promo">
-        <xs:element name="Orientation" type="xs:string"/>
-      </xs:extension>
-    </xs:complexContent>
-  </xs:complexType>
-
-  <xs:complexType name="PromoOrientationSpe">
-    <xs:complexContent>
-      <xs:extension base="PromoOrientation">
-        <xs:element name="Spécialité" type="xs:string"/>
-      </xs:extension>
-    </xs:complexContent>
-  </xs:complexType>
-
-
 
 </xs:schema>
