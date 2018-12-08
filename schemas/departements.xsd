@@ -3,15 +3,12 @@
   elementFormDefault="qualified"
   targetNamespace="departements" 
   xmlns="departements"
-  xmlns:d="departements"
   xmlns:p="personnels">
 
-  <xs:import namespace="personnels" schemaLocation="personnels.xsd"/>
-  
   <xs:element name="Départements">
     <xs:complexType>
       <xs:sequence>
-        <xs:element name="Département" type="d:Département" minOccurs="0" maxOccurs="unbounded"/>
+        <xs:element name="Département" type="Département" minOccurs="0" maxOccurs="unbounded"/>
       </xs:sequence>
     </xs:complexType>
     <xs:key name="DépartementAcronyme">
@@ -24,7 +21,6 @@
     <xs:sequence>
       <xs:element name="Nom" type="xs:string"/>
       <xs:element name="DateCréation" type="xs:date"/>
-      <!-- FAUT QUE CE SOIT UNE REF VERS PERSONNEL -->
       <xs:element name="Directeur" type="xs:ID" />
     </xs:sequence>
     <xs:attribute name="acronyme" type="xs:ID" use="required"/>

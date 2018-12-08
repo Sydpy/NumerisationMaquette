@@ -2,8 +2,7 @@
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
   elementFormDefault="qualified"
   targetNamespace="personnels"
-  xmlns="personnels"
-  xmlns:p="personnels">
+  xmlns="personnels">
   
   <xs:element name="Personnels">
     <xs:complexType>
@@ -12,7 +11,7 @@
       </xs:sequence>
     </xs:complexType>
     <xs:key name="PersonnelID">
-      <xs:selector xpath="p:Personnel"/>
+      <xs:selector xpath="Personnel"/>
       <xs:field xpath="@id"/>
     </xs:key>
   </xs:element>

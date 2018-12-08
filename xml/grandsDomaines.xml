@@ -1,16 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<grandsDomaines xmlns:xs="http://www.w3.org/2001/XMLSchema-instance"
-  xs:noNamespaceSchemaLocation="::/schemas/grandsDomaines.xsd">
-    <grandDomaine>
+
+<GrandsDomaines xmlns="grandsDomaines"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="grandsDomaines ../schemas/grandsDomaines.xsd">
+
+    <GrandDomaine id="GD-SA">
         <Intitulé>Sciences appliquées</Intitulé>
-        <id>1</id>
-    </grandDomaine>
-    <grandDomaine>
+    </GrandDomaine>
+
+    <GrandDomaine id="GD-APS">
         <Intitulé>APS MO PPI</Intitulé>
-        <id>2</id>
-    </grandDomaine>
-    <grandDomaine>
+    </GrandDomaine>
+
+    <GrandDomaine id="GD-SH">
         <Intitulé>Sciences humaines</Intitulé>
-        <id>3</id>
-    </grandDomaine>
-</grandsDomaines>
+    </GrandDomaine>
+
+</GrandsDomaines>

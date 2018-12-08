@@ -1,45 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <Départements xmlns="departements"
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="departements ../schemas/departements.xsd">
-  <Département acroyme="STPI">
+
+  <Département acronyme="STPI">
     <Nom>Sciences et Technologies Pour l'Ingénieur</Nom>
     <DateCréation>1963-12-01</DateCréation>
     <Directeur></Directeur>
   </Département>
-  <Département acroyme="GMM">
+
+  <Département acronyme="GMM">
     <Nom>Génie Mathématique et Modélisation</Nom>
     <DateCréation>1963-12-01</DateCréation>
     <Directeur></Directeur>
   </Département>
-  <Département acroyme="GC">
+
+  <Département acronyme="GC">
     <Nom>Génie Civil</Nom>
     <DateCréation>1963-12-01</DateCréation>
     <Directeur></Directeur>
   </Département>
-  <Département acroyme="GB">
+
+  <Département acronyme="GB">
     <Nom>Génie Biochimique</Nom>
     <DateCréation>1963-12-01</DateCréation>
     <Directeur></Directeur>
   </Département>
-  <Département acroyme="GM">
+
+  <Département acronyme="GM">
     <Nom>Génie Mécanique</Nom>
     <DateCréation>1963-12-01</DateCréation>
     <Directeur></Directeur>
   </Département>
-  <Département acroyme="GP">
+
+  <Département acronyme="GP">
     <Nom>Génie Physique</Nom>
     <DateCréation>1963-12-01</DateCréation>
     <Directeur></Directeur>
   </Département>
-  <Département acroyme="GPE">
+
+  <Département acronyme="GPE">
     <Nom>Génie des Procédés et Environnement</Nom>
     <DateCréation>1963-12-01</DateCréation>
     <Directeur></Directeur>
   </Département>
-  <Département acroyme="GEI">
+
+  <Département acronyme="GEI">
     <Nom>Génie Electrique et Informatique</Nom>
     <DateCréation>1963-12-01</DateCréation>
     <Directeur></Directeur>
   </Département>
+
 </Départements>

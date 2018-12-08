@@ -1,111 +1,111 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<Promos xmlns:xs="http://www.w3.org/2001/XMLSchema-instance"
-  xs:schemaLocation="promos ../schemas/promos.xsd"
-  xmlns="promos">
+<Promos xmlns="promos"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="promos ../schemas/promos.xsd">
 
-  <Promo id="1A">
+  <Promo id="PROMO-1A">
     <Année>1</Année>
     <Département>STPI</Département>
   </Promo>
 
-  <Promo id="2MIC">
+  <Promo id="PROMO-2MIC">
     <Année>2</Année>
     <Département>STPI</Département>
     <PréOrientation>Modélisation, Informatique et Communication</PréOrientation>
   </Promo>
 
-  <Promo id="2IC">
+  <Promo id="PROMO-2IC">
     <Année>2</Année>
     <Département>STPI</Département>
     <PréOrientation>Ingénierie de la Construction</PréOrientation>
   </Promo>
 
-  <Promo id="2IMACS">
+  <Promo id="PROMO-2IMACS">
     <Année>2</Année>
     <Département>STPI</Département>
     <PréOrientation>Ingénierie des Matériaux, Composants et Systèmes</PréOrientation>
   </Promo>
 
-  <Promo id="2ICBE">
+  <Promo id="PROMO-2ICBE">
     <Année>2</Année>
     <Département>STPI</Département>
     <PréOrientation>Ingénierie Chimique, Biochimique et Environnementale</PréOrientation>
   </Promo>
 
-  <Promo id="3MIC">
+  <Promo id="PROMO-3MIC">
     <Année>3</Année>
     <Département>STPI</Département>
     <PréOrientation>Modélisation, Informatique et Communication</PréOrientation>
   </Promo>
 
-  <Promo id="3IC">
+  <Promo id="PROMO-3IC">
     <Année>3</Année>
     <Département>STPI</Département>
     <PréOrientation>Ingénierie de la Construction</PréOrientation>
   </Promo>
 
-  <Promo id="3IMACS">
+  <Promo id="PROMO-3IMACS">
     <Année>3</Année>
     <Département>STPI</Département>
     <PréOrientation>Ingénierie des Matériaux, Composants et Systèmes</PréOrientation>
   </Promo>
 
-  <Promo id="3ICBE">
+  <Promo id="PROMO-3ICBE">
     <Année>3</Année>
     <Département>STPI</Département>
     <PréOrientation>Ingénierie Chimique, Biochimique et Environnementale</PréOrientation>
   </Promo>
 
-  <Promo id="4IR">
+  <Promo id="PROMO-4IR">
     <Année>4</Année>
     <Département>GEI</Département>
     <Orientation>Informatique et Réseaux</Orientation>
   </Promo>
 
-  <Promo id="4MA">
+  <Promo id="PROMO-4MA">
     <Année>4</Année>
     <Département>GMM</Département>
     <Orientation>Mathématiques Appliquées</Orientation>
   </Promo>
 
-  <Promo id="4AE">
+  <Promo id="PROMO-4AE">
     <Année>4</Année>
     <Département>GEI</Département>
     <Orientation>Automatique et Electronique</Orientation>
   </Promo>
 
-  <Promo id="4GP">
+  <Promo id="PROMO-4GP">
     <Année>4</Année>
     <Département>GP</Département>
     <Orientation>Génie Physique</Orientation>
   </Promo>
 
-  <Promo id="4GPE">
+  <Promo id="PROMO-4GPE">
     <Année>4</Année>
     <Département>GPE</Département>
     <Orientation>Génie des Procédés et Environnement</Orientation>
   </Promo>
 
-  <Promo id="4GB">
+  <Promo id="PROMO-4GB">
     <Année>4</Année>
     <Département>GB</Département>
     <Orientation>Génie Biologique</Orientation>
   </Promo>
 
-  <Promo id="4GC">
+  <Promo id="PROMO-4GC">
     <Année>4</Année>
     <Département>GC</Département>
     <Orientation>Génie Civil</Orientation>
   </Promo>
 
-  <Promo id="4GM">
+  <Promo id="PROMO-4GM">
     <Année>4</Année>
     <Département>GM</Département>
     <Orientation>Génie Mécanique</Orientation>
   </Promo>
 
-  <Promo id="5SDBD">
+  <Promo id="PROMO-5SDBD">
     <Année>5</Année>
     <Département>GEI</Département>
     <Orientation>
@@ -114,7 +114,7 @@
     </Orientation>
   </Promo>
 
-  <Promo id="5SIEC">
+  <Promo id="PROMO-5SIEC">
     <Année>5</Année>
     <Département>GEI</Département>
     <Orientation>
