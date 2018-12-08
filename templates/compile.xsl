@@ -7,13 +7,16 @@
 
 	<xsl:param name="departements" select="document('../xml/departements.xml')"/>
 	<xsl:param name="grandsDomaines" select="document('../xml/grandsDomaines.xml')"/>
+	<xsl:param name="personnels" select="document('../xml/personnels.xml')"/>
+	<xsl:param name="promos" select="document('../xml/promos.xml')"/>
 
 	<xsl:template match="/">
 
 		<root>
-
 			<xsl:copy-of select="$departements/*"/>
 			<xsl:copy-of select="$grandsDomaines/*"/>
+			<xsl:copy-of select="$personnels/*"/>
+			<xsl:copy-of select="$promos/*"/>
 
 		</root>
 
