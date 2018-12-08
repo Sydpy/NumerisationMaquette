@@ -13,8 +13,9 @@
             </xs:restriction>
           </xs:simpleType>
         </xs:element>
-        <xs:element name="NbUFAChoisir" type="xs:int"/>
-
+        <!-- FAUT QUE CE SOIT UNE REF VERS PROMO -->
+        <xs:element name="Promo" type="Promo" />
+        <xs:element name="NbUFAChoisir" type="xs:int" default="0"/>
         <xs:element name="UFs">
           <xs:complexType>
             <xs:sequence>
@@ -26,7 +27,7 @@
             <xs:field xpath="@code"/>
           </xs:key>
         </xs:element>
-      
+
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -48,7 +49,6 @@
           </xs:sequence>
         </xs:complexType>
       </xs:element>
-
     </xs:sequence>
     <xs:attribute name="code" type="xs:ID"/>
   </xs:complexType>
@@ -63,6 +63,9 @@
   <xs:complexType name="UFChoix">
     <xs:complexContent>
       <xs:extension base="UF">
+        <xs:sequence>
+          <xs:element name="Spécialité" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
