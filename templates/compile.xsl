@@ -18,6 +18,7 @@
 			<xsl:copy-of select="$personnels/*"/>
 			<xsl:copy-of select="$promos/*"/>
 
+			<xsl:copy-of select="*"/>
 		</root>
 
 	</xsl:template>
