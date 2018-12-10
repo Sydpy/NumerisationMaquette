@@ -11,7 +11,7 @@ validate () {
 }
 
 compile_maquette () {
-	xsltproc templates/compile.xsl $1 -o $2
+	xsltproc templates/compile.xsl $1 -o $2 && validate $1 schemas/compile.xsd
 }
 
 if (( $# != 2 ))
@@ -22,9 +22,9 @@ fi
 
 # Validate data files
 validate xml/departements.xml schemas/departements.xsd
-validate xml/grandsDomaines.xml schemas/departements.xsd
-validate xml/personnels.xml schemas/departements.xsd
-validate xml/promos.xml	schemas/departements.xsd
+validate xml/grandsDomaines.xml schemas/grandsDomaines.xsd
+validate xml/personnels.xml schemas/personnels.xsd
+validate xml/promos.xml	schemas/promos.xsd
 
 # Validate input maquette file
 validate $1 schemas/maquette.xsd
