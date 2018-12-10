@@ -13,8 +13,7 @@
             </xs:restriction>
           </xs:simpleType>
         </xs:element>
-        <!-- FAUT QUE CE SOIT UNE REF VERS PROMO -->
-        <xs:element name="Promo" type="Promo" />
+        <xs:element name="Promo" type="xs:ID" />
         <xs:element name="NbUFAChoisir" type="xs:int" default="0"/>
         <xs:element name="UFs">
           <xs:complexType>
@@ -38,8 +37,7 @@
       <xs:element name="Hétérogène" type="xs:boolean"/>
       <xs:element name="ECTS" type="xs:float"/>
       <xs:element name="ParCompétences" type="xs:boolean"/>
-      <!-- FAUT QUE CE SOIT UNE REF VERS GRANDDOMAINE-->
-      <xs:element name="GdDomaine" type="xs:ID" minOccurs="0" />
+      <xs:element name="GranddDomaine" type="xs:ID" minOccurs="0" />
       <xs:element name="Responsable" type="xs:ID"/>
 
       <xs:element name="UEs">
@@ -75,7 +73,6 @@
       <xs:element name="Intitulé" type="xs:string"/>
       <xs:element name="Coefficient" type="xs:float"/>
       <xs:element name="ParCompétences" type="xs:boolean"/>
-      <!-- FAUT QUE CE SOIT UNE REF VERS PERSONNEL-->
       <xs:element name="Responsable" type="xs:ID"/>
       <xs:element name="HeuresCM" type="xs:float"/>
       <xs:element name="HeuresTD" type="xs:float"/>
