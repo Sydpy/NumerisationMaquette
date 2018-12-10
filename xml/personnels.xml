@@ -73,4 +73,78 @@
         <Téléphone>+33619836785</Téléphone>
     </Personnel>
 
+    <Personnel id="dragomirescu">
+        <Nom>Dragomirescu</Nom>
+        <Prénom>Daniela</Prénom>
+        <Grade>Directeur</Grade>
+        <Bureau>Table</Bureau>
+        <Mail>daniela.dragomirescu@insa-toulouse.fr</Mail>
+        <Téléphone>+0561336379</Téléphone>
+    </Personnel>
+
+    <Personnel id="dauxois">
+        <Nom>Dauxois</Nom>
+        <Prénom>Jean-Yves</Prénom>
+        <Grade>Directeur</Grade>
+        <Bureau>1</Bureau>
+        <Mail>jean-yves.dauxois@insa-toulouse.fr</Mail>
+        <Téléphone>+0561559315</Téléphone>
+    </Personnel>
+
+    <Personnel id="pic">
+        <Nom>Pic</Nom>
+        <Prénom>Jean-Stéphane</Prénom>
+        <Grade>Directeur</Grade>
+        <Bureau>table</Bureau>
+        <Mail>jean-stephane.pic@insa-toulouse.fr</Mail>
+        <Téléphone>+0561559747</Téléphone>
+    </Personnel>
+
+    <Personnel id="schimtz">
+        <Nom>Schmitz</Nom>
+        <Prénom>Philippe</Prénom>
+        <Grade>Directeur</Grade>
+        <Bureau>table</Bureau>
+        <Mail>philippe.schmitz@insa-toulouse.fr</Mail>
+        <Téléphone>+0561559513</Téléphone>
+    </Personnel>
+
+    <Personnel id="duprat">
+        <Nom>Duprat</Nom>
+        <Prénom>Frédéric</Prénom>
+        <Grade>Directeur</Grade>
+        <Bureau>table</Bureau>
+        <Mail>frederic.duprat@insa-toulouse.fr</Mail>
+        <Téléphone>+0561559513</Téléphone>
+    </Personnel>
+
+    <Personnel id="paredes">
+        <Nom>Paredes</Nom>
+        <Prénom>Manuel</Prénom>
+        <Grade>Directeur</Grade>
+        <Bureau>table</Bureau>
+        <Mail>manuel.paredes@insa-toulouse.fr</Mail>
+        <Téléphone>+0561559513</Téléphone>
+    </Personnel>
+
+    <Personnel id="vignolles">
+        <Nom>Vignolles</Nom>
+        <Prénom>David</Prénom>
+        <Grade>Directeur</Grade>
+        <Bureau>table</Bureau>
+        <Mail>david.vignolles@insa-toulouse.fr</Mail>
+        <Téléphone>+0561559513</Téléphone>
+    </Personnel>
+
+    <Personnel id="hebrard">
+        <Nom>Hébrard</Nom>
+        <Prénom>Gilles</Prénom>
+        <Grade>Directeur</Grade>
+        <Bureau>table</Bureau>
+        <Mail>gilles.hebrard@insa-toulouse.fr</Mail>
+        <Téléphone>+0561559513</Téléphone>
+    </Personnel>
+
+
+
 </Personnels>

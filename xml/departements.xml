@@ -7,49 +7,49 @@
   <Département acronyme="STPI">
     <Nom>Sciences et Technologies Pour l'Ingénieur</Nom>
     <DateCréation>1963-12-01</DateCréation>
-    <Directeur></Directeur>
+    <Directeur>pic</Directeur>
   </Département>
 
   <Département acronyme="GMM">
     <Nom>Génie Mathématique et Modélisation</Nom>
     <DateCréation>1963-12-01</DateCréation>
-    <Directeur></Directeur>
+    <Directeur>dauxois</Directeur>
   </Département>
 
   <Département acronyme="GC">
     <Nom>Génie Civil</Nom>
     <DateCréation>1963-12-01</DateCréation>
-    <Directeur></Directeur>
+    <Directeur>duprat</Directeur>
   </Département>
 
   <Département acronyme="GB">
     <Nom>Génie Biochimique</Nom>
     <DateCréation>1963-12-01</DateCréation>
-    <Directeur></Directeur>
+    <Directeur>schimtz</Directeur>
   </Département>
 
   <Département acronyme="GM">
     <Nom>Génie Mécanique</Nom>
     <DateCréation>1963-12-01</DateCréation>
-    <Directeur></Directeur>
+    <Directeur>paredes</Directeur>
   </Département>
 
   <Département acronyme="GP">
     <Nom>Génie Physique</Nom>
     <DateCréation>1963-12-01</DateCréation>
-    <Directeur></Directeur>
+    <Directeur>vignolles</Directeur>
   </Département>
 
   <Département acronyme="GPE">
     <Nom>Génie des Procédés et Environnement</Nom>
     <DateCréation>1963-12-01</DateCréation>
-    <Directeur></Directeur>
+    <Directeur>hebrard</Directeur>
   </Département>
 
   <Département acronyme="GEI">
     <Nom>Génie Electrique et Informatique</Nom>
     <DateCréation>1963-12-01</DateCréation>
-    <Directeur></Directeur>
+    <Directeur>dragomirescu</Directeur>
   </Département>
 
 </Départements>
