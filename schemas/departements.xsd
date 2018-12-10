@@ -5,17 +5,13 @@
   xmlns="departements"
   xmlns:p="personnels">
 
-  <xs:element name="Départements">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element name="Département" type="Département" minOccurs="0" maxOccurs="unbounded"/>
-      </xs:sequence>
-    </xs:complexType>
-    <xs:key name="DépartementAcronyme">
-      <xs:selector xpath="./Département"/>
-      <xs:field xpath="@acronyme"/>
-    </xs:key>
-  </xs:element>
+  <xs:element name="Départements" type="Départements"/>
+
+  <xs:complexType name="Départements">
+    <xs:sequence>
+      <xs:element name="Département" type="Département" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
 
   <xs:complexType name="Département">
     <xs:sequence>

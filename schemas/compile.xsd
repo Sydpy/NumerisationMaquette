@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="Utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+  elementFormDefault="qualified"
+  targetNamespace="compile" 
+  xmlns="compile"
+  xmlns:p="compile">
+
+  <xs:import namespace="d" schemaLocation="departements.xsd"/>
+  <xs:import namespace="g" schemaLocation="grandsDomaines.xsd"/>
+  <xs:import namespace="pe" schemaLocation="personnels.xsd"/>
+  <xs:import namespace="pr" schemaLocation="promos.xsd"/>
+  <xs:import namespace="m" schemaLocation="maquette.xsd"/>
+  
+  <xs:element name="root">
+    <xs:complexType>
+      <xs:sequence name="Départements" type="d:Départements"/>
+      <xs:sequence name="GrandsDomaines" type="g:Départements"/>
+      <xs:sequence name="Personnels" type="pe:Personnels"/>
+      <xs:sequence name="Promos" type="pr:Promos"/>
+      <xs:sequence name="Maquette" type="m:Maquette"/>
+    </xs:complexType>
+
+    <!-- Définitions des clés -->
+    <xs:key name="DépartementAcronyme">
+      <xs:selector xpath="./Départements/Département"/>
+      <xs:field xpath="@acronyme"/>
+    </xs:key>
+
+    <xs:key name="GrandDomaineID">
+      <xs:selector xpath="./GrandsDomaines/GrandDomaine"/>
+      <xs:field xpath="@id"/>
+    </xs:key>
+
+    <xs:key name="PersonnelID">
+      <xs:selector xpath="./Personnels/Personnel"/>
+      <xs:field xpath="@id"/>
+    </xs:key>
+
+    <xs:key name="PromoID">
+      <xs:selector xpath="./Promos/Promo"/>
+      <xs:field xpath="@id"/>
+    </xs:key>
+
+    <xs:key name="UFCode">
+      <xs:selector xpath="./Maquette/UFs/UF"/>
+      <xs:field xpath="@code"/>
+    </xs:key>
+
+  </xs:element> 
+
+</xs:schema>
