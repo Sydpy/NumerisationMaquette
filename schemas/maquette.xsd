@@ -2,34 +2,30 @@
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
   targetNamespace="https://raw.githubusercontent.com/Sydpy/NumerisationMaquette/master/schemas">
 
-  <xs:element name="Maquette">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element name="Semestre">
-          <xs:simpleType>
-            <xs:restriction base="xs:integer">
-              <xs:minInclusive value="1"/>
-              <xs:maxInclusive value="10"/>
-            </xs:restriction>
-          </xs:simpleType>
-        </xs:element>
-        <xs:element name="Promo" type="xs:ID" />
-        <xs:element name="NbUFAChoisir" type="xs:int" default="0"/>
-        <xs:element name="UFs">
-          <xs:complexType>
-            <xs:sequence>
-              <xs:element name="UF" type="UF" maxOccurs="unbounded"/>
-            </xs:sequence>
-          </xs:complexType>
-          <xs:key name="UFCode">
-            <xs:selector xpath="./UF"/>
-            <xs:field xpath="@code"/>
-          </xs:key>
-        </xs:element>
+  <xs:element name="Maquette" type="Maquette"/>
 
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
+  <xs:complexType name="Maquette">
+    <xs:sequence>
+      <xs:element name="Semestre">
+        <xs:simpleType>
+          <xs:restriction base="xs:integer">
+            <xs:minInclusive value="1"/>
+            <xs:maxInclusive value="10"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="Promo" type="xs:ID" />
+      <xs:element name="NbUFAChoisir" type="xs:int" default="0"/>
+      <xs:element name="UFs">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="UF" type="UF" maxOccurs="unbounded"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+
+    </xs:sequence>
+  </xs:complexType>
 
   <xs:complexType name="UF">
     <xs:sequence>

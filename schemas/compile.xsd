@@ -10,7 +10,7 @@
   <xs:import namespace="pe" schemaLocation="personnels.xsd"/>
   <xs:import namespace="pr" schemaLocation="promos.xsd"/>
   <xs:import namespace="m" schemaLocation="maquette.xsd"/>
-  
+
   <xs:element name="root">
     <xs:complexType>
       <xs:sequence name="Départements" type="d:Départements"/>
@@ -25,26 +25,48 @@
       <xs:selector xpath="./Départements/Département"/>
       <xs:field xpath="@acronyme"/>
     </xs:key>
-
     <xs:key name="GrandDomaineID">
       <xs:selector xpath="./GrandsDomaines/GrandDomaine"/>
       <xs:field xpath="@id"/>
     </xs:key>
-
     <xs:key name="PersonnelID">
       <xs:selector xpath="./Personnels/Personnel"/>
       <xs:field xpath="@id"/>
     </xs:key>
-
     <xs:key name="PromoID">
       <xs:selector xpath="./Promos/Promo"/>
       <xs:field xpath="@id"/>
     </xs:key>
-
     <xs:key name="UFCode">
       <xs:selector xpath="./Maquette/UFs/UF"/>
       <xs:field xpath="@code"/>
     </xs:key>
+
+    <!-- Définition des références -->
+    <xs:keyref name="DptDirecteurRef" refer="PersonnelID">
+      <xs:selector xpath="./Départements/Département/Directeur"/>
+      <xs:field xpath="."/>
+    </xs:keyref>  
+    <xs:keyref name="MaquettePromoRef" refer="PromoID">
+      <xs:selector xpath="./Maquette/Promo"/>
+      <xs:field xpath="."/>
+    </xs:keyref>  
+    <xs:keyref name="UFGrandDomaineRef" refer="GrandDomaineID">
+      <xs:selector xpath="./Maquette/UFs/UF/GrandDomaine"/>
+      <xs:field xpath="."/>
+    </xs:keyref>  
+    <xs:keyref name="UFResponsableRef" refer="PersonnelID">
+      <xs:selector xpath="./Maquette/UFs/UF/Responsable"/>
+      <xs:field xpath="."/>
+    </xs:keyref>  
+    <xs:keyref name="UEResponsableRef" refer="PersonnelID">
+      <xs:selector xpath="./Maquette/UFs/UF/UEs/UE/Responsable"/>
+      <xs:field xpath="."/>
+    </xs:keyref>  
+    <xs:keyref name="PromoDepartementRef" refer="DépartementAcronyme">
+      <xs:selector xpath="./Promos/Promo/Département"/>
+      <xs:field xpath="."/>
+    </xs:keyref>  
 
   </xs:element> 
 
