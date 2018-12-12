@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="Utf-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
-  targetNamespace="https://raw.githubusercontent.com/Sydpy/NumerisationMaquette/master/schemas">
+  elementFormDefault="qualified"
+  targetNamespace="maquette"
+  xmlns="maquette">
 
   <xs:element name="Maquette">
     <xs:complexType>
@@ -18,7 +20,8 @@
         <xs:element name="UFs">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="UF" type="UF" maxOccurs="unbounded"/>
+              <xs:element name="UFObligatoire" type="UFObligatoire" minOccurs="0" maxOccurs="unbounded"/>
+              <xs:element name="UFChoix" type="UFChoix" minOccurs="0" maxOccurs="unbounded"/>
             </xs:sequence>
           </xs:complexType>
           <xs:key name="UFCode">
@@ -26,7 +29,6 @@
             <xs:field xpath="@code"/>
           </xs:key>
         </xs:element>
-
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -35,11 +37,10 @@
     <xs:sequence>
       <xs:element name="Intitulé" type="xs:string"/>
       <xs:element name="Hétérogène" type="xs:boolean"/>
-      <xs:element name="ECTS" type="xs:float"/>
+      <xs:element name="ECTS" type="xs:decimal"/>
       <xs:element name="ParCompétences" type="xs:boolean"/>
-      <xs:element name="GranddDomaine" type="xs:ID" minOccurs="0" />
+      <xs:element name="GrandDomaine" type="xs:ID" minOccurs="0" />
       <xs:element name="Responsable" type="xs:ID"/>
-
       <xs:element name="UEs">
         <xs:complexType>
           <xs:sequence>
@@ -71,31 +72,27 @@
   <xs:complexType name="UE">
     <xs:sequence>
       <xs:element name="Intitulé" type="xs:string"/>
-      <xs:element name="Coefficient" type="xs:float"/>
+      <xs:element name="Coefficient" type="xs:decimal"/>
       <xs:element name="ParCompétences" type="xs:boolean"/>
-      <xs:element name="Responsable" type="xs:ID"/>
-      <xs:element name="HeuresCM" type="xs:float"/>
-      <xs:element name="HeuresTD" type="xs:float"/>
-      <xs:element name="HeuresTP" type="xs:float"/>
-
-      <xs:element name="Compétences">
+      <xs:element name="Responsable" type="xs:ID" maxOccurs="unbounded"/>
+      <xs:element name="HeuresCM" type="xs:decimal"/>
+      <xs:element name="HeuresTD" type="xs:decimal"/>
+      <xs:element name="HeuresTP" type="xs:decimal"/>
+      <xs:element name="Compétences" minOccurs="0">
         <xs:complexType>
           <xs:sequence>
             <xs:element name="Compétence" type="Compétence" maxOccurs="unbounded"/>
           </xs:sequence>
         </xs:complexType>
       </xs:element>
-
-      <xs:element name="Épreuves">
+      <xs:element name="Épreuves" minOccurs="0">
         <xs:complexType>
           <xs:sequence>
             <xs:element name="Épreuve" type="Épreuve" maxOccurs="unbounded"/>
           </xs:sequence>
         </xs:complexType>
       </xs:element>
-
     </xs:sequence>
-    <xs:attribute name="Code" type="xs:ID"/>
   </xs:complexType>
 
   <xs:complexType name="Compétence">
@@ -107,8 +104,9 @@
   <xs:complexType name="Épreuve">
     <xs:sequence>
       <xs:element name="Intitulé" type="xs:string"/>
-      <xs:element name="Coefficient" type="xs:float"/>
+      <xs:element name="Coefficient" type="xs:decimal"/>
     </xs:sequence>
+    <xs:attribute name="code" type="xs:string"/>
   </xs:complexType>
 
 </xs:schema>
