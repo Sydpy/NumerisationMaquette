@@ -13,7 +13,6 @@
         <Téléphone>+33615458745</Téléphone>
     </Personnel>
 
-
     <Personnel id="vernadat">
         <Nom>Vernadat</Nom>
         <Prénom>François</Prénom>
@@ -25,28 +24,28 @@
 
     <Personnel id="baron">
         <Nom>Baron</Nom>
-        <Prénom>C</Prénom>
+        <Prénom>Claude</Prénom>
         <Grade>Maître de conférences</Grade>
         <Bureau>Table</Bureau>
-        <Mail>vernadat@insa-toulouse.fr</Mail>
+        <Mail>baron@insa-toulouse.fr</Mail>
         <Téléphone>+33615458785</Téléphone>
     </Personnel>
 
     <Personnel id="huguet">
         <Nom>Huguet</Nom>
-        <Prénom>MJ</Prénom>
+        <Prénom>Marie-José</Prénom>
         <Grade>Maître de conférences</Grade>
         <Bureau>Table</Bureau>
-        <Mail>vernadat@insa-toulouse.fr</Mail>
+        <Mail>marie-jose.huguet@insa-toulouse.fr</Mail>
         <Téléphone>+33615458785</Téléphone>
     </Personnel>
 
     <Personnel id="tredan">
         <Nom>Tredan</Nom>
-        <Prénom>G</Prénom>
+        <Prénom>Gilles</Prénom>
         <Grade>Maître de conférences</Grade>
         <Bureau>Table</Bureau>
-        <Mail>vernadat@insa-toulouse.fr</Mail>
+        <Mail>gilles.tredan@insa-toulouse.fr</Mail>
         <Téléphone>+33615458785</Téléphone>
     </Personnel>
 
@@ -55,7 +54,7 @@
         <Prénom>Vincent</Prénom>
         <Grade>Maître de conférences</Grade>
         <Bureau>Table</Bureau>
-        <Mail>vernadat@insa-toulouse.fr</Mail>
+        <Mail>vincent.nicomette@insa-toulouse.fr</Mail>
         <Téléphone>+33615458785</Téléphone>
     </Personnel>
 
@@ -64,7 +63,7 @@
         <Prénom>Sami</Prénom>
         <Grade>Maître de conférences</Grade>
         <Bureau>Table</Bureau>
-        <Mail>vernadat@insa-toulouse.fr</Mail>
+        <Mail>sami.yangui@insa-toulouse.fr</Mail>
         <Téléphone>+33615458785</Téléphone>
     </Personnel>
 
@@ -73,7 +72,7 @@
         <Prénom>Christophe</Prénom>
         <Grade>Maître de conférences</Grade>
         <Bureau>Table</Bureau>
-        <Mail>vernadat@insa-toulouse.fr</Mail>
+        <Mail>christophe.chassot@insa-toulouse.fr</Mail>
         <Téléphone>+33615458785</Téléphone>
     </Personnel>
 
@@ -82,7 +81,7 @@
         <Prénom>Slim</Prénom>
         <Grade>Maître de conférences</Grade>
         <Bureau>Table</Bureau>
-        <Mail>vernadat@insa-toulouse.fr</Mail>
+        <Mail>slim.abdellatif@insa-toulouse.fr</Mail>
         <Téléphone>+33615458785</Téléphone>
     </Personnel>
 
@@ -91,7 +90,7 @@
         <Prénom>MA</Prénom>
         <Grade>Maître de conférences</Grade>
         <Bureau>Table</Bureau>
-        <Mail>vernadat@insa-toulouse.fr</Mail>
+        <Mail>marie-agnes.detourbe@insa-toulouse.fr</Mail>
         <Téléphone>+33615458785</Téléphone>
     </Personnel>
 
@@ -100,16 +99,16 @@
         <Prénom>Hélène</Prénom>
         <Grade>Maître de conférences</Grade>
         <Bureau>Table</Bureau>
-        <Mail>vernadat@insa-toulouse.fr</Mail>
+        <Mail>helene.hereng@insa-toulouse.fr</Mail>
         <Téléphone>+33615458785</Téléphone>
     </Personnel>
 
     <Personnel id="negrel">
         <Nom>Negrel</Nom>
-        <Prénom>N</Prénom>
+        <Prénom>Nathalie</Prénom>
         <Grade>Maître de conférences</Grade>
         <Bureau>Table</Bureau>
-        <Mail>vernadat@insa-toulouse.fr</Mail>
+        <Mail>nathalie.negrel@insa-toulouse.fr</Mail>
         <Téléphone>+33615458785</Téléphone>
     </Personnel>
 
@@ -118,7 +117,7 @@
         <Prénom>Françoise</Prénom>
         <Grade>Maître de conférences</Grade>
         <Bureau>Table</Bureau>
-        <Mail>vernadat@insa-toulouse.fr</Mail>
+        <Mail>francoise.rey@insa-toulouse.fr</Mail>
         <Téléphone>+33615458785</Téléphone>
     </Personnel>
 
@@ -127,7 +126,7 @@
         <Prénom>Patrick</Prénom>
         <Grade>Maître de conférences</Grade>
         <Bureau>Table</Bureau>
-        <Mail>vernadat@insa-toulouse.fr</Mail>
+        <Mail>patrick.esquirol@insa-toulouse.fr</Mail>
         <Téléphone>+33615458785</Téléphone>
     </Personnel>
 
@@ -136,7 +135,7 @@
         <Prénom>Bertrand</Prénom>
         <Grade>Maître de conférences</Grade>
         <Bureau>Table</Bureau>
-        <Mail>vernadat@insa-toulouse.fr</Mail>
+        <Mail>bertrand.tondu@insa-toulouse.fr</Mail>
         <Téléphone>+33615458785</Téléphone>
     </Personnel>
 
@@ -145,7 +144,7 @@
         <Prénom>Thierry</Prénom>
         <Grade>Maître de conférences</Grade>
         <Bureau>Table</Bureau>
-        <Mail>vernadat@insa-toulouse.fr</Mail>
+        <Mail>thierry.dupont@insa-toulouse.fr</Mail>
         <Téléphone>+33615458785</Téléphone>
     </Personnel>
 
