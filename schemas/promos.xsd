@@ -4,17 +4,13 @@
   targetNamespace="promos"
   xmlns="promos">
 
-  <xs:element name="Promos">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element name="Promo" type="Promo" minOccurs="0" maxOccurs="unbounded"/>
-      </xs:sequence>
-    </xs:complexType>
-    <xs:key name="PromoID">
-      <xs:selector xpath="./Promo"/>
-      <xs:field xpath="@id"/>
-    </xs:key>
-  </xs:element>
+  <xs:element name="Promos" type="Promos"/>
+
+  <xs:complexType name="Promos">
+    <xs:sequence>
+      <xs:element name="Promo" type="Promo" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
 
   <xs:complexType name="Promo">
     <xs:sequence>

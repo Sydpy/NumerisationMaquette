@@ -4,18 +4,14 @@
   targetNamespace="grandsDomaines"
   xmlns="grandsDomaines">
   
-  <xs:element name="GrandsDomaines">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element name="GrandDomaine" type="GrandDomaine" minOccurs="0" maxOccurs="unbounded"/>
-      </xs:sequence>
-    </xs:complexType>
-    <xs:key name="GrandDomaineID">
-      <xs:selector xpath="./GrandDomaine"/>
-      <xs:field xpath="@id"/>
-    </xs:key>
-  </xs:element>
-  
+  <xs:element name="GrandsDomaines" type="GrandsDomaines"/>
+
+  <xs:complexType name="GrandsDomaines">
+    <xs:sequence>
+      <xs:element name="GrandDomaine" type="GrandDomaine" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
   <xs:complexType name="GrandDomaine">
     <xs:sequence>
       <xs:element name="Intitulé" type="xs:string"/>

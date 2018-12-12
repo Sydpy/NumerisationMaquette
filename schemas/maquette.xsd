@@ -4,8 +4,9 @@
   targetNamespace="maquette"
   xmlns="maquette">
 
-  <xs:element name="Maquette">
-    <xs:complexType>
+  <xs:element name="Maquette" type="Maquette"/>
+
+    <xs:complexType name="Maquette">
       <xs:sequence>
         <xs:element name="Semestre">
           <xs:simpleType>
@@ -31,7 +32,6 @@
         </xs:element>
       </xs:sequence>
     </xs:complexType>
-  </xs:element>
 
   <xs:complexType name="UF">
     <xs:sequence>

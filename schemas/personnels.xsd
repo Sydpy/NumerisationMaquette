@@ -3,18 +3,14 @@
   elementFormDefault="qualified"
   targetNamespace="personnels"
   xmlns="personnels">
-  
-  <xs:element name="Personnels">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element name="Personnel" type="Personnel" minOccurs="0" maxOccurs="unbounded"/>
-      </xs:sequence>
-    </xs:complexType>
-    <xs:key name="PersonnelID">
-      <xs:selector xpath="Personnel"/>
-      <xs:field xpath="@id"/>
-    </xs:key>
-  </xs:element>
+
+  <xs:element name="Personnels" type="Personnels"/>
+
+  <xs:complexType name="Personnels">
+    <xs:sequence>
+      <xs:element name="Personnel" type="Personnel" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
 
   <xs:complexType name="Personnel">
     <xs:sequence>
