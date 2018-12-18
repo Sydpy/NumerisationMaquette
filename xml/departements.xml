@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<Départements xmlns="departements"
+<Départements xmlns="http://mdsi.etudinsa.org/"
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="departements ../schemas/departements.xsd">
+  xsi:schemaLocation="../schemas/departements.xsd">
 
   <Département acronyme="STPI">
     <Nom>Sciences et Technologies Pour l'Ingénieur</Nom>

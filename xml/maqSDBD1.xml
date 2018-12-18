@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <?xml-stylesheet href="tohtml.xsl" type="text/xsl"?>
 <root>
-  <Départements xmlns="departements" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="departements ../schemas/departements.xsd">
+  <Départements xmlns="http://mdsi.etudinsa.org/departements" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://mdsi.etudinsa.org/departements ../schemas/departements.xsd">
     <Département acronyme="STPI">
       <Nom>Sciences et Technologies Pour l'Ingénieur</Nom>
       <DateCréation>1963-12-01</DateCréation>
@@ -43,7 +43,7 @@
       <Directeur>dragomirescu</Directeur>
     </Département>
   </Départements>
-  <GrandsDomaines xmlns="grandsDomaines" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="grandsDomaines ../schemas/grandsDomaines.xsd">
+  <GrandsDomaines xmlns="http://mdsi.etudinsa.org/grandsDomaines" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://mdsi.etudinsa.org/grandsDomaines ../schemas/grandsDomaines.xsd">
     <GrandDomaine id="GD-SA">
       <Intitulé>Sciences appliquées</Intitulé>
     </GrandDomaine>
@@ -54,7 +54,7 @@
       <Intitulé>Sciences humaines</Intitulé>
     </GrandDomaine>
   </GrandsDomaines>
-  <Personnels xmlns="personnels" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="personnels ../schemas/personnels.xsd">
+  <Personnels xmlns="http://mdsi.etudinsa.org/personnels" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://mdsi.etudinsa.org/personnels ../schemas/personnels.xsd">
     <Personnel id="guermouc">
       <Nom>Guermouche</Nom>
       <Prénom>Nawal</Prénom>
@@ -288,7 +288,7 @@
       <Téléphone>+0561559513</Téléphone>
     </Personnel>
   </Personnels>
-  <Promos xmlns="promos" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="promos ../schemas/promos.xsd">
+  <Promos xmlns="http://mdsi.etudinsa.org/promos" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://mdsi.etudinsa.org/promos ../schemas/promos.xsd">
     <Promo id="PROMO-1A">
       <Année>1</Année>
       <Département>STPI</Département>
@@ -390,7 +390,7 @@
     </Promo>
   </Promos>
   <root>
-    <Départements xmlns="departements" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="departements ../schemas/departements.xsd">
+    <Départements xmlns="http://mdsi.etudinsa.org/departements" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://mdsi.etudinsa.org/departements ../schemas/departements.xsd">
       <Département acronyme="STPI">
         <Nom>Sciences et Technologies Pour l'Ingénieur</Nom>
         <DateCréation>1963-12-01</DateCréation>
@@ -432,7 +432,7 @@
         <Directeur>dragomirescu</Directeur>
       </Département>
     </Départements>
-    <GrandsDomaines xmlns="grandsDomaines" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="grandsDomaines ../schemas/grandsDomaines.xsd">
+    <GrandsDomaines xmlns="http://mdsi.etudinsa.org/grandsDomaines" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://mdsi.etudinsa.org/grandsDomaines ../schemas/grandsDomaines.xsd">
       <GrandDomaine id="GD-SA">
         <Intitulé>Sciences appliquées</Intitulé>
       </GrandDomaine>
@@ -443,7 +443,7 @@
         <Intitulé>Sciences humaines</Intitulé>
       </GrandDomaine>
     </GrandsDomaines>
-    <Personnels xmlns="personnels" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="personnels ../schemas/personnels.xsd">
+    <Personnels xmlns="http://mdsi.etudinsa.org/personnels" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://mdsi.etudinsa.org/personnels ../schemas/personnels.xsd">
       <Personnel id="guermouc">
         <Nom>Guermouche</Nom>
         <Prénom>Nawal</Prénom>
@@ -677,7 +677,7 @@
         <Téléphone>+0561559513</Téléphone>
       </Personnel>
     </Personnels>
-    <Promos xmlns="promos" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="promos ../schemas/promos.xsd">
+    <Promos xmlns="http://mdsi.etudinsa.org/promos" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://mdsi.etudinsa.org/promos ../schemas/promos.xsd">
       <Promo id="PROMO-1A">
         <Année>1</Année>
         <Département>STPI</Département>
@@ -778,7 +778,7 @@
       <Spécialité> Systèmes Informatiques Embarqués Critiques</Spécialité></Orientation>
       </Promo>
     </Promos>
-    <Maquette xmlns="maquette" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="maquette ../schemas/maquette.xsd">
+    <Maquette xmlns="http://mdsi.etudinsa.org/maquette" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://mdsi.etudinsa.org/maquette ../schemas/maquette.xsd">
       <Semestre>1</Semestre>
       <Promo>PROMO-5SDBD</Promo>
       <NbUFAChoisir>1</NbUFAChoisir>

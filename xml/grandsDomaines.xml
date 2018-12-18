@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<GrandsDomaines xmlns="grandsDomaines"
+<GrandsDomaines xmlns="http://mdsi.etudinsa.org/"
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="grandsDomaines ../schemas/grandsDomaines.xsd">
+  xsi:schemaLocation="../schemas/grandsDomaines.xsd">
 
     <GrandDomaine id="GD-SA">
         <Intitulé>Sciences appliquées</Intitulé>

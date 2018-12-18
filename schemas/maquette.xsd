@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="Utf-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
   elementFormDefault="qualified"
-  targetNamespace="maquette"
-  xmlns="maquette">
+  targetNamespace="http://mdsi.etudinsa.org/"
+  xmlns="http://mdsi.etudinsa.org/">
 
   <xs:element name="Maquette" type="Maquette"/>
 
@@ -25,10 +25,6 @@
               <xs:element name="UFChoix" type="UFChoix" minOccurs="0" maxOccurs="unbounded"/>
             </xs:sequence>
           </xs:complexType>
-          <xs:key name="UFCode">
-            <xs:selector xpath="./UF"/>
-            <xs:field xpath="@code"/>
-          </xs:key>
         </xs:element>
       </xs:sequence>
     </xs:complexType>

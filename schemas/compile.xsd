@@ -1,23 +1,24 @@
 <?xml version="1.0" encoding="Utf-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
   elementFormDefault="qualified"
-  targetNamespace="compile" 
-  xmlns="compile"
-  xmlns:p="compile">
+  targetNamespace="http://mdsi.etudinsa.org/"
+  xmlns="http://mdsi.etudinsa.org/">
 
-  <xs:import namespace="d" schemaLocation="departements.xsd"/>
-  <xs:import namespace="g" schemaLocation="grandsDomaines.xsd"/>
-  <xs:import namespace="pe" schemaLocation="personnels.xsd"/>
-  <xs:import namespace="pr" schemaLocation="promos.xsd"/>
-  <xs:import namespace="m" schemaLocation="maquette.xsd"/>
+  <xs:include schemaLocation="./departements.xsd"/>
+  <xs:include schemaLocation="./grandsDomaines.xsd"/>
+  <xs:include schemaLocation="./personnels.xsd"/>
+  <xs:include schemaLocation="./promos.xsd"/>
+  <xs:include schemaLocation="./maquette.xsd"/>
 
   <xs:element name="root">
     <xs:complexType>
-      <xs:sequence name="Départements" type="d:Départements"/>
-      <xs:sequence name="GrandsDomaines" type="g:Départements"/>
-      <xs:sequence name="Personnels" type="pe:Personnels"/>
-      <xs:sequence name="Promos" type="pr:Promos"/>
-      <xs:sequence name="Maquette" type="m:Maquette"/>
+      <xs:sequence>
+        <xs:element name="Départements" type="Départements"/>
+        <xs:element name="GrandsDomaines" type="GrandsDomaines"/>
+        <xs:element name="Personnels" type="Personnels"/>
+        <xs:element name="Promos" type="Promos"/>
+        <xs:element name="Maquette" type="Maquette"/>
+      </xs:sequence>
     </xs:complexType>
 
     <!-- Définitions des clés -->

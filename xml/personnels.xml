@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<Personnels xmlns="personnels"
+<Personnels xmlns="http://mdsi.etudinsa.org/"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="personnels ../schemas/personnels.xsd">
+    xsi:schemaLocation="../schemas/personnels.xsd">
 
     <Personnel id="guermouc">
         <Nom>Guermouche</Nom>

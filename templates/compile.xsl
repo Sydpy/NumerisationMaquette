@@ -12,7 +12,8 @@
 
 	<xsl:template match="/">
 
-		<root>
+		<root xmlns="http://mdsi.etudinsa.org/">
+
 			<xsl:copy-of select="$departements/*"/>
 			<xsl:copy-of select="$grandsDomaines/*"/>
 			<xsl:copy-of select="$personnels/*"/>

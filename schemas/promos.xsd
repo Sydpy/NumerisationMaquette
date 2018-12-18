@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="Utf-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
   elementFormDefault="qualified"
-  targetNamespace="promos"
-  xmlns="promos">
+  targetNamespace="http://mdsi.etudinsa.org/"
+  xmlns="http://mdsi.etudinsa.org/">
 
   <xs:element name="Promos" type="Promos"/>
 
