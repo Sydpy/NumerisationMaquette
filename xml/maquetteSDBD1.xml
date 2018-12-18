@@ -349,7 +349,7 @@
           <HeuresTP>13.75</HeuresTP>
           <Épreuves>
             <Épreuve code="E2">
-              <Intitulé>Contrôlet</Intitulé>
+              <Intitulé>Contrôle</Intitulé>
               <Coefficient>1</Coefficient>
             </Épreuve>
           </Épreuves>
@@ -404,7 +404,7 @@
           <HeuresTP>24.75</HeuresTP>
           <Épreuves>
             <Épreuve code="E2">
-              <Intitulé>Contrôlet</Intitulé>
+              <Intitulé>Contrôle</Intitulé>
               <Coefficient>1</Coefficient>
             </Épreuve>
           </Épreuves>
@@ -443,7 +443,7 @@
           <HeuresTP>10</HeuresTP>
           <Épreuves>
             <Épreuve code="E2">
-              <Intitulé>Contrôlet</Intitulé>
+              <Intitulé>Contrôle</Intitulé>
               <Coefficient>1</Coefficient>
             </Épreuve>
           </Épreuves>
