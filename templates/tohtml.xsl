@@ -35,7 +35,7 @@
         </xsl:otherwise>
       </xsl:choose>
       <td><xsl:value-of select="r:Responsable"/></td>
-      <!-- <td><xsl:value-of select="r:root/r:Personnels/r:Personnel[@id=r:Responsable]/r:Nom"/></td> -->
+      <td><xsl:value-of select="r:root/r:Personnels/r:Personnel[@id=r:Responsable]/r:Nom"/></td>
       <td><xsl:value-of select="sum(r:UEs/r:UE/r:HeuresCM)"/></td>
       <td><xsl:value-of select="sum(r:UEs/r:UE/r:HeuresTD)"/></td>
       <td><xsl:value-of select="sum(r:UEs/r:UE/r:HeuresTP)"/></td>
@@ -80,17 +80,32 @@
         <td><xsl:value-of select="r:HeuresCM + r:HeuresTD + r:HeuresTP"/></td>
         <!-- <td rowspan="{$countEpreuves}"><xsl:value-of select="r:Coefficient"/></td> -->
         <td><xsl:value-of select="r:Coefficient"/></td>
-        <td><xsl:value-of select="r:Épreuves/r:Épreuve/@code"/></td>
+        <!-- <td><xsl:value-of select="r:Épreuves/r:Épreuve/@code"/></td>
         <td><xsl:value-of select="r:Épreuves/r:Épreuve/r:Intitulé"/></td>
-        <td><xsl:value-of select="r:Épreuves/r:Épreuve/r:Coefficient"/></td>
+        <td><xsl:value-of select="r:Épreuves/r:Épreuve/r:Coefficient"/></td> -->
+      <!-- </tr> -->
+        <td>
+            <ul>
+              <xsl:for-each select="r:Épreuves/r:Épreuve">
+                <li><xsl:value-of select="@code"/></li>
+              </xsl:for-each>
+            </ul>
+        </td>
+        <td>
+            <ul>
+              <xsl:for-each select="r:Épreuves/r:Épreuve">
+                <li><xsl:value-of select="r:Intitulé"/></li>
+              </xsl:for-each>
+            </ul>
+        </td>
+        <td>
+            <ul>
+              <xsl:for-each select="r:Épreuves/r:Épreuve">
+                <li><xsl:value-of select="r:Coefficient"/></li>
+              </xsl:for-each>
+            </ul>
+        </td>
       </tr>
-      <!-- <xsl:for-each select="r:Épreuves/r:Épreuve">
-        <tr>
-          <td><xsl:value-of select="@code"/></td>
-          <td><xsl:value-of select="r:Intitulé"/></td>
-          <td><xsl:value-of select="r:Coefficient"/></td>
-        </tr>
-      </xsl:for-each> -->
     </xsl:for-each>
   </xsl:template>
 
