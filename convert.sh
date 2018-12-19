@@ -21,6 +21,11 @@ validate () {
 
 apply_template () {
 	xsltproc -o $3 $1 $2
+	if (( $? != 0 )); then
+		echo
+		print_red "Failed to apply template $1 to $2.\n"
+		exit 1
+	fi
 }
 
 if (( $# != 2 )); then
