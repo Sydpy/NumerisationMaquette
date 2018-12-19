@@ -56,5 +56,10 @@ print_yellow "** Converting compiled file to html format **\n"
 apply_template templates/tohtml.xsl $tmp $2
 echo
 
+# Remove temp file
+print_yellow "** Cleaning **\n"
+rm $tmp
+echo
+
 print_green "$1 has successfully been converted to $2\n"
 echo
