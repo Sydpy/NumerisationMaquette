@@ -14,7 +14,7 @@
   </xsl:variable>
 
   <xsl:template name="ufcontent">
-    <tr>
+    <tr class="ufhead">
       <td><xsl:value-of select="@code"/></td>
       <td><xsl:value-of select="r:Intitulé"/></td>
       <td><xsl:value-of select="r:ECTS"/></td>
@@ -40,6 +40,9 @@
       <td><xsl:value-of select="sum(r:UEs/r:UE/r:HeuresTD)"/></td>
       <td><xsl:value-of select="sum(r:UEs/r:UE/r:HeuresTP)"/></td>
       <td><xsl:value-of select="sum(r:UEs/r:UE/r:HeuresCM) + sum(r:UEs/r:UE/r:HeuresTD) + sum(r:UEs/r:UE/r:HeuresTP)"/></td>
+      <td></td>
+      <td></td>
+      <td></td>
     </tr>
     <xsl:for-each select="r:UEs/r:UE">
       <!-- <xsl:variable name="countEpreuves">
@@ -112,14 +115,22 @@
   <xsl:template match="/">
     <html>
       <head>
+        <title>Maquette S<xsl:value-of select="r:root/r:Maquette/r:Semestre"/> de la <xsl:value-of select="r:root/r:Maquette/r:Promo"/></title>
         <style>
           table, th, td {
-          border: 1px solid black;
-          border-collapse: collapse;
+              border: 1px solid black;
+              border-collapse: collapse;
           }
           th, td {
-          padding: 5px;
-          text-align: left;
+              padding: 5px;
+              text-align: left;
+          }
+          th.tablehead{
+            background-color:rgb(220,220,220);
+          }
+          tr.ufhead{
+            font-weight:bold;
+            background-color:rgb(240,240,240);
           }
         </style>
       </head>
@@ -128,18 +139,18 @@
         <!-- <p></p> -->
         <table style="width:100%">
           <tr>
-            <th>Type d'UF</th>
-            <th colspan="2">UF</th>
-            <th>ECTS</th>
-            <th>Répartition des UEs</th>
-            <th>Notation</th>
-            <th>Responsable</th>
-            <th>Heures de CM</th>
-            <th>Heures de TD</th>
-            <th>Heures de TP</th>
-            <th>Total d'heures</th>
-            <th>Coefficient</th>
-            <th colspan="3">Epreuves</th>
+            <th class="tablehead">Type d'UF</th>
+            <th class="tablehead" colspan="2">UF</th>
+            <th class="tablehead">ECTS</th>
+            <th class="tablehead">Répartition des UEs</th>
+            <th class="tablehead">Notation</th>
+            <th class="tablehead">Responsable</th>
+            <th class="tablehead">Heures de CM</th>
+            <th class="tablehead">Heures de TD</th>
+            <th class="tablehead">Heures de TP</th>
+            <th class="tablehead">Total d'heures</th>
+            <th class="tablehead">Coefficient</th>
+            <th class="tablehead" colspan="3">Epreuves</th>
           </tr>
           <tr>
             <th rowspan="{$countUFObligatoire}">UF obligatoire</th>
