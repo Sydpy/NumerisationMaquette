@@ -56,52 +56,52 @@
         </xsl:choose>
       </xsl:variable> -->
       <tr>
-        <td></td>
-        <td><xsl:value-of select="r:Intitulé"/></td>
-        <td><xsl:value-of select="r:ECTS"/></td>
+        <td class="ufcontent"></td>
+        <td class="ufcontent"><xsl:value-of select="r:Intitulé"/></td>
+        <td class="ufcontent"><xsl:value-of select="r:ECTS"/></td>
         <xsl:choose>
           <xsl:when test="r:Hétérogène='true'">
-            <td>Hétérogène</td>
+            <td class="ufcontent">Hétérogène</td>
           </xsl:when>
           <xsl:otherwise>
-            <td>Homogène</td>
+            <td class="ufcontent">Homogène</td>
           </xsl:otherwise>
         </xsl:choose>
         <xsl:choose>
           <xsl:when test="r:ParCompétences='true'">
-            <td>Par compétences</td>
+            <td class="ufcontent">Par compétences</td>
           </xsl:when>
           <xsl:otherwise>
-            <td>Par Notes</td>
+            <td class="ufcontent">Par Notes</td>
           </xsl:otherwise>
         </xsl:choose>
         <!-- <td><xsl:value-of select="r:root/r:Personnels/r:Personnel[@id=r:Responsable]/r:Nom"/></td> -->
-        <td><xsl:value-of select="r:Responsable"/></td>
-        <td><xsl:value-of select="r:HeuresCM"/></td>
-        <td><xsl:value-of select="r:HeuresTD"/></td>
-        <td><xsl:value-of select="r:HeuresTP"/></td>
-        <td><xsl:value-of select="r:HeuresCM + r:HeuresTD + r:HeuresTP"/></td>
+        <td class="ufcontent"><xsl:value-of select="r:Responsable"/></td>
+        <td class="ufcontent"><xsl:value-of select="r:HeuresCM"/></td>
+        <td class="ufcontent"><xsl:value-of select="r:HeuresTD"/></td>
+        <td class="ufcontent"><xsl:value-of select="r:HeuresTP"/></td>
+        <td class="ufcontent"><xsl:value-of select="r:HeuresCM + r:HeuresTD + r:HeuresTP"/></td>
         <!-- <td rowspan="{$countEpreuves}"><xsl:value-of select="r:Coefficient"/></td> -->
-        <td><xsl:value-of select="r:Coefficient"/></td>
+        <td class="ufcontent"><xsl:value-of select="r:Coefficient"/></td>
         <!-- <td><xsl:value-of select="r:Épreuves/r:Épreuve/@code"/></td>
         <td><xsl:value-of select="r:Épreuves/r:Épreuve/r:Intitulé"/></td>
         <td><xsl:value-of select="r:Épreuves/r:Épreuve/r:Coefficient"/></td> -->
       <!-- </tr> -->
-        <td>
+        <td class="ufcontent">
             <ul>
               <xsl:for-each select="r:Épreuves/r:Épreuve">
                 <li><xsl:value-of select="@code"/></li>
               </xsl:for-each>
             </ul>
         </td>
-        <td>
+        <td class="ufcontent">
             <ul>
               <xsl:for-each select="r:Épreuves/r:Épreuve">
                 <li><xsl:value-of select="r:Intitulé"/></li>
               </xsl:for-each>
             </ul>
         </td>
-        <td>
+        <td class="ufcontent">
             <ul>
               <xsl:for-each select="r:Épreuves/r:Épreuve">
                 <li><xsl:value-of select="r:Coefficient"/></li>
@@ -129,15 +129,25 @@
             background-color:rgb(220,220,220);
           }
           tr.ufhead{
+            border: 1px solid black;
             font-weight:bold;
+            background-color:rgb(100,240,100);
+          }
+          /*tr.ufhead:hover{
+            border: 3px solid black;
+            background-color:rgb(100,240,100);*/
+          }
+          td.ufcontent{
+            display: none;
             background-color:rgb(240,240,240);
           }
         </style>
+        <script src="tohtml.js"></script>
       </head>
       <body>
         <h2> Maquette S<xsl:value-of select="r:root/r:Maquette/r:Semestre"/> de la <xsl:value-of select="r:root/r:Maquette/r:Promo"/> </h2>
         <!-- <p></p> -->
-        <table style="width:100%">
+        <table id="maquette" style="width:100%">
           <tr>
             <th class="tablehead">Type d'UF</th>
             <th class="tablehead" colspan="2">UF</th>
