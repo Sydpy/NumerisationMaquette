@@ -55,7 +55,8 @@
           </xsl:otherwise>
         </xsl:choose>
       </xsl:variable> -->
-      <tr>
+
+      <xsl:element name="tr"><xsl:attribute name="id"><xsl:value-of select="@code"/></xsl:attribute>  <!-- TODO Le @code n'est pas récupéré ici need help -->
         <td class="ufcontent"></td>
         <td class="ufcontent"><xsl:value-of select="r:Intitulé"/></td>
         <td class="ufcontent"><xsl:value-of select="r:ECTS"/></td>
@@ -108,7 +109,7 @@
               </xsl:for-each>
             </ul>
         </td>
-      </tr>
+      </xsl:element>
     </xsl:for-each>
   </xsl:template>
 
@@ -142,7 +143,6 @@
             background-color:rgb(240,240,240);
           }
         </style>
-        <script src="tohtml.js"></script>
       </head>
       <body>
         <h2> Maquette S<xsl:value-of select="r:root/r:Maquette/r:Semestre"/> de la <xsl:value-of select="r:root/r:Maquette/r:Promo"/> </h2>
@@ -178,7 +178,39 @@
             <xsl:call-template name="ufcontent"/>
           </xsl:for-each>
         </table>
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+
+        <script>
+        $(function() {
+
+            function setDisplayRows(rows, display, idUfMaster) {
+                rows.each(function(index, row) {
+                    if(row.getAttribute("data-idufmaster") == idUfMaster) { // Si la ligne correspond à la bonne tête, on l'affiche
+                        if(display == true) {
+                            row.style.display = "table-row";
+                        } else {
+                            row.style.display = "none";
+                        }
+                    }
+                })
+            }
+
+            // Le display:none de la classe .ufcontent ne semble pas marcher, on va cacher manuellement les lignes voulues une fois la page chargée
+            $("tr.ufcontent").css("display", "none");
+
+            $("tr.ufhead").click(function(event) {
+                var idUfMaster = $(this).attr("id"); // On récupère l'identifiant qu'on a mis dans la ligne de tête
+                var rows = $("tr.ufcontent"); // On récupère toutes les lignes ayant la classe .ufcontent
+                var currentDisplay = $(this).data("expanded");
+                console.log(idUfMaster)
+                console.log(currentDisplay)
+                setDisplayRows(rows, !currentDisplay, idUfMaster);
+                $(this).data("expanded", !currentDisplay);
+            });
+        });
+        </script>
       </body>
+
     </html>
   </xsl:template>
 </xsl:stylesheet>
