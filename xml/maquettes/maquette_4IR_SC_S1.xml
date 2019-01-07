@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Maquette xmlns="http://mdsi.etudinsa.org/"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="../schemas/maquette.xsd">
+
+    <Semestre>1</Semestre>
+    <Promo>PROMO-4IR</Promo>
+    <NbUFAChoisir>0</NbUFAChoisir>
+    <UFs>
+        <!-- UF de Tronc commun S7 -->
+        <UFObligatoire code="I4IRIL11">
+            <Intitulé>COO et POO</Intitulé>
+            <Hétérogène>false</Hétérogène>
+            <ECTS>5</ECTS>
+            <ParCompétences>false</ParCompétences>
+            <Responsable>abdellatif</Responsable>
+            <UEs>
+                <UE>
+                    <Intitulé>Conception Orientée Objets</Intitulé>
+                    <Coefficient>0.333</Coefficient>
+                    <ParCompétences>false</ParCompétences>
+                    <Responsable>wambeke</Responsable>
+                    <HeuresCM>10</HeuresCM>
+                    <HeuresTD>16.25</HeuresTD>
+                    <HeuresTP>0</HeuresTP>
+                    <Épreuves>
+                        <Épreuve code="E1">
+                            <Intitulé>Contrôle</Intitulé>
+                            <Coefficient>1</Coefficient>
+                        </Épreuve>
+                    </Épreuves>
+                </UE>
+                <UE>
+                    <Intitulé>Programmation Orientée Objets</Intitulé>
+                    <Coefficient>0.666</Coefficient>
+                    <ParCompétences>false</ParCompétences>
+                    <Responsable>yangui</Responsable>
+                    <HeuresCM>7.5</HeuresCM>
+                    <HeuresTD>8.75</HeuresTD>
+                    <HeuresTP>33</HeuresTP>
+                    <Épreuves>
+                        <Épreuve code="E2">
+                            <Intitulé>Contrôle</Intitulé>
+                            <Coefficient>1</Coefficient>
+                        </Épreuve>
+                    </Épreuves>
+                </UE>
+            </UEs>
+        </UFObligatoire>
+        <UFObligatoire code="I4IRRS11">
+            <Intitulé>Internet et sécurité</Intitulé>
+            <Hétérogène>true</Hétérogène>
+            <ECTS>5</ECTS>
+            <ParCompétences>false</ParCompétences>
+            <Responsable>alata</Responsable>
+            <UEs>
+                <UE>
+                    <Intitulé>Interconnexion de réseaux</Intitulé>
+                    <Coefficient>0.35</Coefficient>
+                    <ParCompétences>false</ParCompétences>
+                    <Responsable>chassot</Responsable>
+                    <HeuresCM>15</HeuresCM>
+                    <HeuresTD>1.25</HeuresTD>
+                    <HeuresTP>8.25</HeuresTP>
+                    <Épreuves>
+                        <Épreuve code="E1">
+                            <Intitulé>Contrôle</Intitulé>
+                            <Coefficient>1</Coefficient>
+                        </Épreuve>
+                    </Épreuves>
+                </UE>
+                <UE>
+                    <Intitulé>Algorithmique répartie</Intitulé>
+                    <Coefficient>0.3</Coefficient>
+                    <ParCompétences>false</ParCompétences>
+                    <Responsable>vernadat</Responsable>
+                    <HeuresCM>10</HeuresCM>
+                    <HeuresTD>0</HeuresTD>
+                    <HeuresTP>0</HeuresTP>
+                    <Épreuves>
+                        <Épreuve code="E2">
+                            <Intitulé>Contrôle</Intitulé>
+                            <Coefficient>1</Coefficient>
+                        </Épreuve>
+                    </Épreuves>
+                </UE>
+                <UE>
+                    <Intitulé>Sécurité informatique et dans l'Internet</Intitulé>
+                    <Coefficient>0.35</Coefficient>
+                    <ParCompétences>false</ParCompétences>
+                    <Responsable>nicomette</Responsable>
+                    <HeuresCM>17.5</HeuresCM>
+                    <HeuresTD>2.5</HeuresTD>
+                    <HeuresTP>8.25</HeuresTP>
+                    <Épreuves>
+                        <Épreuve code="E3">
+                            <Intitulé>Contrôle</Intitulé>
+                            <Coefficient>1</Coefficient>
+                        </Épreuve>
+                    </Épreuves>
+                </UE>
+            </UEs>
+        </UFObligatoire>
+        <UFObligatoire code="I4CCGA21">
+            <Intitulé>Grandir en autonomie</Intitulé>
+            <Hétérogène>true</Hétérogène>
+            <ECTS>4</ECTS>
+            <ParCompétences>false</ParCompétences>
+            <Responsable>rossard</Responsable>
+            <UEs>
+                <UE>
+                    <Intitulé>APS</Intitulé>
+                    <Coefficient>0.5</Coefficient>
+                    <ParCompétences>false</ParCompétences>
+                    <Responsable>rossard</Responsable>
+                    <HeuresCM>0</HeuresCM>
+                    <HeuresTD>25</HeuresTD>
+                    <HeuresTP>0</HeuresTP>
+                    <Épreuves>
+                        <Épreuve code="E1">
+                            <Intitulé>Contrôle</Intitulé>
+                            <Coefficient>1</Coefficient>
+                        </Épreuve>
+                    </Épreuves>
+                </UE>
+                <UE>
+                    <Intitulé>PPI</Intitulé>
+                    <Coefficient>0.5</Coefficient>
+                    <ParCompétences>false</ParCompétences>
+                    <Responsable>dupont</Responsable>
+                    <HeuresCM>0</HeuresCM>
+                    <HeuresTD>0</HeuresTD>
+                    <HeuresTP>0</HeuresTP>
+                    <Épreuves>
+                        <Épreuve code="E2">
+                            <Intitulé>Contrôle</Intitulé>
+                            <Coefficient>1</Coefficient>
+                        </Épreuve>
+                    </Épreuves>
+                </UE>
+                <UE>
+                    <Intitulé>Module d'ouverture (semaine CREDIGE)</Intitulé>
+                    <Coefficient>0</Coefficient>
+                    <ParCompétences>false</ParCompétences>
+                    <Responsable>blank</Responsable>
+                    <HeuresCM>0</HeuresCM>
+                    <HeuresTD>32</HeuresTD>
+                    <HeuresTP>0</HeuresTP>
+                </UE>
+            </UEs>
+        </UFObligatoire>
+        <UFObligatoire code="I4CCGE11">
+            <Intitulé>Développer ses compétences managériales</Intitulé>
+            <Hétérogène>true</Hétérogène>
+            <ECTS>4</ECTS>
+            <ParCompétences>false</ParCompétences>
+            <Responsable>leclert</Responsable>
+            <UEs>
+                <UE>
+                    <Intitulé>Droit</Intitulé>
+                    <Coefficient>0.333</Coefficient>
+                    <ParCompétences>false</ParCompétences>
+                    <Responsable>leclert</Responsable>
+                    <HeuresCM>15</HeuresCM>
+                    <HeuresTD>0</HeuresTD>
+                    <HeuresTP>0</HeuresTP>
+                    <Épreuves>
+                        <Épreuve code="E1">
+                            <Intitulé>Contrôle</Intitulé>
+                            <Coefficient>1</Coefficient>
+                        </Épreuve>
+                    </Épreuves>
+                </UE>
+                <UE>
+                    <Intitulé>Finance</Intitulé>
+                    <Coefficient>0.333</Coefficient>
+                    <ParCompétences>false</ParCompétences>
+                    <Responsable>lomi</Responsable>
+                    <HeuresCM>15</HeuresCM>
+                    <HeuresTD>0</HeuresTD>
+                    <HeuresTP>0</HeuresTP>
+                    <Épreuves>
+                        <Épreuve code="E2">
+                            <Intitulé>Contrôle</Intitulé>
+                            <Coefficient>1</Coefficient>
+                        </Épreuve>
+                    </Épreuves>
+                </UE>
+                <UE>
+                    <Intitulé>Marketing</Intitulé>
+                    <Coefficient>0.333</Coefficient>
+                    <ParCompétences>false</ParCompétences>
+                    <Responsable>leclert</Responsable>
+                    <HeuresCM>15</HeuresCM>
+                    <HeuresTD>0</HeuresTD>
+                    <HeuresTP>0</HeuresTP>
+                    <Épreuves>
+                        <Épreuve code="E3">
+                            <Intitulé>Contrôle</Intitulé>
+                            <Coefficient>1</Coefficient>
+                        </Épreuve>
+                    </Épreuves>
+                </UE>
+            </UEs>
+        </UFObligatoire>
+        <!-- UF de IR-SC -->
+        <UFObligatoire code="I4IRRS21">
+            <Intitulé>Réseaux de mobiles et réseaux sans fil</Intitulé>
+            <Hétérogène>true</Hétérogène>
+            <ECTS>6</ECTS>
+            <ParCompétences>false</ParCompétences>
+            <Responsable>dragomirescu</Responsable>
+            <UEs>
+                <UE>
+                    <Intitulé>Réseaux locaux et personnels sans fil</Intitulé>
+                    <Coefficient>0.35</Coefficient>
+                    <ParCompétences>false</ParCompétences>
+                    <Responsable>abdellatif</Responsable>
+                    <HeuresCM>7.5</HeuresCM>
+                    <HeuresTD>2.5</HeuresTD>
+                    <HeuresTP>11</HeuresTP>
+                    <Épreuves>
+                        <Épreuve code="E1">
+                            <Intitulé>Projet 1</Intitulé>
+                            <Coefficient>1</Coefficient>
+                        </Épreuve>
+                    </Épreuves>
+                </UE>
+                <UE>
+                    <Intitulé>Réseaux de mobiles</Intitulé>
+                    <Coefficient>0.5</Coefficient>
+                    <ParCompétences>false</ParCompétences>
+                    <Responsable>dragomirescu</Responsable>
+                    <HeuresCM>20</HeuresCM>
+                    <HeuresTD>3.75</HeuresTD>
+                    <HeuresTP>11</HeuresTP>
+                    <Épreuves>
+                        <Épreuve code="E1">
+                            <Intitulé>Projet 1</Intitulé>
+                            <Coefficient>1</Coefficient>
+                        </Épreuve>
+                    </Épreuves>
+                </UE>
+                <UE>
+                    <Intitulé>Energie pour les systèmes mobiles</Intitulé>
+                    <Coefficient>0.075</Coefficient>
+                    <ParCompétences>false</ParCompétences>
+                    <Responsable>nicolas</Responsable>
+                    <HeuresCM>5</HeuresCM>
+                    <HeuresTD>0</HeuresTD>
+                    <HeuresTP>2.75</HeuresTP>
+                    <Épreuves>
+                        <Épreuve code="E3">
+                            <Intitulé>Contrôle</Intitulé>
+                            <Coefficient>1</Coefficient>
+                        </Épreuve>
+                    </Épreuves>
+                </UE>
+                <UE>
+                    <Intitulé>Codage voix et image pour réseaux mobiles</Intitulé>
+                    <Coefficient>0.075</Coefficient>
+                    <ParCompétences>false</ParCompétences>
+                    <Responsable>noullet</Responsable>
+                    <HeuresCM>2.5</HeuresCM>
+                    <HeuresTD>0</HeuresTD>
+                    <HeuresTP>5.5</HeuresTP>
+                    <Épreuves>
+                        <Épreuve code="E3">
+                            <Intitulé>Contrôle</Intitulé>
+                            <Coefficient>1</Coefficient>
+                        </Épreuve>
+                    </Épreuves>
+                </UE>
+            </UEs>
+        </UFObligatoire>
+        <UFObligatoire code="I4IRTC11">
+            <Intitulé>Systèmes de transmission</Intitulé>
+            <Hétérogène>true</Hétérogène>
+            <ECTS>6</ECTS>
+            <ParCompétences>false</ParCompétences>
+            <Responsable>dragomirescu</Responsable>
+            <UEs>
+                <UE>
+                    <Intitulé>Canaux bruités</Intitulé>
+                    <Coefficient>0.15</Coefficient>
+                    <ParCompétences>false</ParCompétences>
+                    <Responsable>boyer</Responsable>
+                    <HeuresCM>6.25</HeuresCM>
+                    <HeuresTD>2.5</HeuresTD>
+                    <HeuresTP>0</HeuresTP>
+                    <Épreuves>
+                        <Épreuve code="E1">
+                            <Intitulé>Contrôle</Intitulé>
+                            <Coefficient>1</Coefficient>
+                        </Épreuve>
+                    </Épreuves>
+                </UE>
+                <UE>
+                    <Intitulé>Codes correcteurs d'erreurs</Intitulé>
+                    <Coefficient>0.15</Coefficient>
+                    <ParCompétences>false</ParCompétences>
+                    <Responsable>pinel</Responsable>
+                    <HeuresCM>7.5</HeuresCM>
+                    <HeuresTD>2.5</HeuresTD>
+                    <HeuresTP>0</HeuresTP>
+                    <Épreuves>
+                        <Épreuve code="E1">
+                            <Intitulé>Contrôle</Intitulé>
+                            <Coefficient>1</Coefficient>
+                        </Épreuve>
+                    </Épreuves>
+                </UE>
+                <UE>
+                    <Intitulé>BE Transmission</Intitulé>
+                    <Coefficient>0.4</Coefficient>
+                    <ParCompétences>false</ParCompétences>
+                    <Responsable>blank</Responsable>
+                    <HeuresCM>2.5</HeuresCM>
+                    <HeuresTD>0</HeuresTD>
+                    <HeuresTP>27.5</HeuresTP>
+                    <Épreuves>
+                        <Épreuve code="E2">
+                            <Intitulé>Projet</Intitulé>
+                            <Coefficient>1</Coefficient>
+                        </Épreuve>
+                    </Épreuves>
+                </UE>
+                <UE>
+                    <Intitulé>Antennes et modèles pour la transmission</Intitulé>
+                    <Coefficient>0.3</Coefficient>
+                    <ParCompétences>false</ParCompétences>
+                    <Responsable>boyer</Responsable>
+                    <HeuresCM>12.5</HeuresCM>
+                    <HeuresTD>1.25</HeuresTD>
+                    <HeuresTP>5.5</HeuresTP>
+                    <Épreuves>
+                        <Épreuve code="E3">
+                            <Intitulé>Contrôle</Intitulé>
+                            <Coefficient>1</Coefficient>
+                        </Épreuve>
+                    </Épreuves>
+                </UE>
+            </UEs>
+        </UFObligatoire>
+    </UFs>
+</Maquette>

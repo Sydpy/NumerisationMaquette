@@ -1,0 +1,470 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Maquette xmlns="http://mdsi.etudinsa.org/"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="../schemas/maquette.xsd">
+
+    <Semestre>1</Semestre>
+    <Promo>PROMO-5SDBD</Promo>
+    <NbUFAChoisir>1</NbUFAChoisir>
+    <UFs>
+        <UFObligatoire code="I5IRIL12">
+            <Intitulé>Ingénierie logicielle et architectures orientées services</Intitulé>
+            <Hétérogène>true</Hétérogène>
+            <ECTS>4</ECTS>
+            <ParCompétences>false</ParCompétences>
+            <Responsable>guermouc</Responsable>
+            <UEs>
+                <UE>
+                    <Intitulé>Ingénierie logicielle</Intitulé>
+                    <Coefficient>0.5</Coefficient>
+                    <ParCompétences>false</ParCompétences>
+                    <Responsable>guermouc</Responsable>
+                    <HeuresCM>11.25</HeuresCM>
+                    <HeuresTD>8.75</HeuresTD>
+                    <HeuresTP>0</HeuresTP>
+                    <Épreuves>
+                        <Épreuve code="E1">
+                            <Intitulé>Contrôle</Intitulé>
+                            <Coefficient>1</Coefficient>
+                        </Épreuve>
+                    </Épreuves>
+                </UE>
+                <UE>
+                    <Intitulé>Architectures orientées services</Intitulé>
+                    <Coefficient>0.5</Coefficient>
+                    <ParCompétences>false</ParCompétences>
+                    <Responsable>guermouc</Responsable>
+                    <HeuresCM>7.5</HeuresCM>
+                    <HeuresTD>15</HeuresTD>
+                    <HeuresTP>19.25</HeuresTP>
+                    <Épreuves>
+                        <Épreuve code="E2">
+                            <Intitulé>Contrôle</Intitulé>
+                            <Coefficient>1</Coefficient>
+                        </Épreuve>
+                    </Épreuves>
+                </UE>
+            </UEs>
+        </UFObligatoire>
+        <UFObligatoire code="I5IRSF11">
+            <Intitulé>Sûreté de fonctionnement</Intitulé>
+            <Hétérogène>true</Hétérogène>
+            <ECTS>3</ECTS>
+            <ParCompétences>false</ParCompétences>
+            <Responsable>vernadat</Responsable>
+            <UEs>
+                <UE>
+                    <Intitulé>Principe de la sûreté de fonctionnement</Intitulé>
+                    <Coefficient>0.33</Coefficient>
+                    <ParCompétences>false</ParCompétences>
+                    <Responsable>baron</Responsable>
+                    <HeuresCM>13.75</HeuresCM>
+                    <HeuresTD>0</HeuresTD>
+                    <HeuresTP>8.25</HeuresTP>
+                    <Épreuves>
+                        <Épreuve code="E1">
+                            <Intitulé>Autre</Intitulé>
+                            <Coefficient>1</Coefficient>
+                        </Épreuve>
+                    </Épreuves>
+                </UE>
+                <UE>
+                    <Intitulé>Modèles temporels</Intitulé>
+                    <Coefficient>0.33</Coefficient>
+                    <ParCompétences>false</ParCompétences>
+                    <Responsable>vernadat</Responsable>
+                    <HeuresCM>6.25</HeuresCM>
+                    <HeuresTD>0</HeuresTD>
+                    <HeuresTP>8.25</HeuresTP>
+                    <Épreuves>
+                        <Épreuve code="E2">
+                            <Intitulé>IE</Intitulé>
+                            <Coefficient>1</Coefficient>
+                        </Épreuve>
+                    </Épreuves>
+                </UE>
+                <UE>
+                    <Intitulé>Vérification de modèles</Intitulé>
+                    <Coefficient>0.33</Coefficient>
+                    <ParCompétences>false</ParCompétences>
+                    <Responsable>vernadat</Responsable>
+                    <HeuresCM>8.75</HeuresCM>
+                    <HeuresTD>0</HeuresTD>
+                    <HeuresTP>5.5</HeuresTP>
+                    <Épreuves>
+                        <Épreuve code="E3">
+                            <Intitulé>IE</Intitulé>
+                            <Coefficient>1</Coefficient>
+                        </Épreuve>
+                    </Épreuves>
+                </UE>
+            </UEs>
+        </UFObligatoire>
+        <UFObligatoire code="I5IRAD12">
+            <Intitulé>Analyse descriptive et prescriptive</Intitulé>
+            <Hétérogène>true</Hétérogène>
+            <ECTS>4</ECTS>
+            <ParCompétences>false</ParCompétences>
+            <Responsable>huguet</Responsable>
+            <UEs>
+                <UE>
+                    <Intitulé>Analyse exploratoire et visualisation de données</Intitulé>
+                    <Coefficient>0.5</Coefficient>
+                    <ParCompétences>false</ParCompétences>
+                    <Responsable>tredan</Responsable>
+                    <HeuresCM>10</HeuresCM>
+                    <HeuresTD>0</HeuresTD>
+                    <HeuresTP>13.75</HeuresTP>
+                    <Épreuves>
+                        <Épreuve code="E1">
+                            <Intitulé>Contrôle</Intitulé>
+                            <Coefficient>1</Coefficient>
+                        </Épreuve>
+                    </Épreuves>
+                </UE>
+                <UE>
+                    <Intitulé>Apprentissage</Intitulé>
+                    <Coefficient>0.5</Coefficient>
+                    <ParCompétences>false</ParCompétences>
+                    <Responsable>huguet</Responsable>
+                    <HeuresCM>12.5</HeuresCM>
+                    <HeuresTD>0</HeuresTD>
+                    <HeuresTP>13.75</HeuresTP>
+                    <Épreuves>
+                        <Épreuve code="E2">
+                            <Intitulé>Contrôle</Intitulé>
+                            <Coefficient>1</Coefficient>
+                        </Épreuve>
+                    </Épreuves>
+                </UE>
+            </UEs>
+        </UFObligatoire>
+        <UFObligatoire code="I5IRBD12">
+            <Intitulé>Infrastructures pour le traitement de données massives</Intitulé>
+            <Hétérogène>true</Hétérogène>
+            <ECTS>4</ECTS>
+            <ParCompétences>false</ParCompétences>
+            <Responsable>nicomette</Responsable>
+            <UEs>
+                <UE>
+                    <Intitulé>Concepts et techniques logicielles associés à la virtualisation</Intitulé>
+                    <Coefficient>0.45</Coefficient>
+                    <ParCompétences>false</ParCompétences>
+                    <Responsable>yangui</Responsable>
+                    <HeuresCM>6.25</HeuresCM>
+                    <HeuresTD>0</HeuresTD>
+                    <HeuresTP>8.25</HeuresTP>
+                    <Épreuves>
+                        <Épreuve code="E1">
+                            <Intitulé>IE</Intitulé>
+                            <Coefficient>1</Coefficient>
+                        </Épreuve>
+                    </Épreuves>
+                </UE>
+                <UE>
+                    <Intitulé>Framework et technologies pour la manipulation de données massives</Intitulé>
+                    <Coefficient>0.30</Coefficient>
+                    <ParCompétences>false</ParCompétences>
+                    <Responsable>yangui</Responsable>
+                    <HeuresCM>8.75</HeuresCM>
+                    <HeuresTD>0</HeuresTD>
+                    <HeuresTP>16.5</HeuresTP>
+                    <Épreuves>
+                        <Épreuve code="E2">
+                            <Intitulé>SOUT</Intitulé>
+                            <Coefficient>1</Coefficient>
+                        </Épreuve>
+                    </Épreuves>
+                </UE>
+                <UE>
+                    <Intitulé>Infrastructure matérielle distribuée et virtualisée</Intitulé>
+                    <Coefficient>0.25</Coefficient>
+                    <ParCompétences>false</ParCompétences>
+                    <Responsable>chassot</Responsable>
+                    <HeuresCM>7.5</HeuresCM>
+                    <HeuresTD>0</HeuresTD>
+                    <HeuresTP>13.75</HeuresTP>
+                    <Épreuves>
+                        <Épreuve code="E3">
+                            <Intitulé>IE</Intitulé>
+                            <Coefficient>1</Coefficient>
+                        </Épreuve>
+                    </Épreuves>
+                </UE>
+            </UEs>
+        </UFObligatoire>
+        <UFObligatoire code="I5IRPR12">
+            <Intitulé>Projet SDBD</Intitulé>
+            <Hétérogène>true</Hétérogène>
+            <ECTS>4</ECTS>
+            <ParCompétences>false</ParCompétences>
+            <Responsable>abdellatif</Responsable>
+            <UEs>
+                <UE>
+                    <Intitulé>Projet commun UF IL, SOA, ADP, INFRA</Intitulé>
+                    <Coefficient>0.33</Coefficient>
+                    <ParCompétences>false</ParCompétences>
+                    <Responsable>abdellatif</Responsable>
+                    <HeuresCM>0</HeuresCM>
+                    <HeuresTD>0</HeuresTD>
+                    <HeuresTP>22</HeuresTP>
+                    <Épreuves>
+                        <Épreuve code="E1">
+                            <Intitulé>Contrôle</Intitulé>
+                            <Coefficient>1</Coefficient>
+                        </Épreuve>
+                    </Épreuves>
+                </UE>
+                <UE>
+                    <Intitulé>Conférences: traitement données massive / vie privé / sécurité / domaine d'pplication</Intitulé>
+                    <Coefficient>0.33</Coefficient>
+                    <ParCompétences>false</ParCompétences>
+                    <Responsable>huguet</Responsable>
+                    <HeuresCM>3.75</HeuresCM>
+                    <HeuresTD>0</HeuresTD>
+                    <HeuresTP>0</HeuresTP>
+                    <Épreuves>
+                        <Épreuve code="E2">
+                            <Intitulé>Contrôle</Intitulé>
+                            <Coefficient>1</Coefficient>
+                        </Épreuve>
+                    </Épreuves>
+                </UE>
+                <UE>
+                    <Intitulé>Anglais</Intitulé>
+                    <Coefficient>0.33</Coefficient>
+                    <ParCompétences>false</ParCompétences>
+                    <Responsable>detourbe</Responsable>
+                    <HeuresCM>0</HeuresCM>
+                    <HeuresTD>35</HeuresTD>
+                    <HeuresTP>0</HeuresTP>
+                    <Épreuves>
+                        <Épreuve code="E3">
+                            <Intitulé>Rapport + Soutenance</Intitulé>
+                            <Coefficient>1</Coefficient>
+                        </Épreuve>
+                    </Épreuves>
+                </UE>
+            </UEs>
+        </UFObligatoire>
+        <UFObligatoire code="I5CCGE21">
+            <Intitulé>Relations humaines et professionnelles, éthique</Intitulé>
+            <Hétérogène>true</Hétérogène>
+            <ECTS>5</ECTS>
+            <ParCompétences>false</ParCompétences>
+            <Responsable>hereng</Responsable>
+            <UEs>
+                <UE>
+                    <Intitulé>Management d'équipe</Intitulé>
+                    <Coefficient>0.34</Coefficient>
+                    <ParCompétences>false</ParCompétences>
+                    <Responsable>hereng</Responsable>
+                    <HeuresCM>20</HeuresCM>
+                    <HeuresTD>0</HeuresTD>
+                    <HeuresTP>0</HeuresTP>
+                    <Épreuves>
+                        <Épreuve code="E1">
+                            <Intitulé>Oral/Ecrit</Intitulé>
+                            <Coefficient>1</Coefficient>
+                        </Épreuve>
+                    </Épreuves>
+                </UE>
+                <UE>
+                    <Intitulé>Psychologie sociale et éthique</Intitulé>
+                    <Coefficient>0.22</Coefficient>
+                    <ParCompétences>false</ParCompétences>
+                    <Responsable>negrel</Responsable>
+                    <HeuresCM>0</HeuresCM>
+                    <HeuresTD>20</HeuresTD>
+                    <HeuresTP>0</HeuresTP>
+                    <Épreuves>
+                        <Épreuve code="E2">
+                            <Intitulé>Oral/Ecrit</Intitulé>
+                            <Coefficient>1</Coefficient>
+                        </Épreuve>
+                    </Épreuves>
+                </UE>
+                <UE>
+                    <Intitulé>APS</Intitulé>
+                    <Coefficient>0.22</Coefficient>
+                    <ParCompétences>false</ParCompétences>
+                    <Responsable>rey</Responsable>
+                    <HeuresCM>0</HeuresCM>
+                    <HeuresTD>25</HeuresTD>
+                    <HeuresTP>0</HeuresTP>
+                    <Épreuves>
+                        <Épreuve code="E3">
+                            <Intitulé>Stage</Intitulé>
+                            <Coefficient>1</Coefficient>
+                        </Épreuve>
+                    </Épreuves>
+                </UE>
+                <UE>
+                    <Intitulé>PPI</Intitulé>
+                    <Coefficient>0.22</Coefficient>
+                    <ParCompétences>false</ParCompétences>
+                    <Responsable>dupont</Responsable>
+                    <HeuresCM>0</HeuresCM>
+                    <HeuresTD>10</HeuresTD>
+                    <HeuresTP>0</HeuresTP>
+                    <Épreuves>
+                        <Épreuve code="E4">
+                            <Intitulé>Oral/Ecrit</Intitulé>
+                            <Coefficient>1</Coefficient>
+                        </Épreuve>
+                    </Épreuves>
+                </UE>
+            </UEs>
+        </UFObligatoire>
+        <UFChoix code="I5IRSD12">
+            <Intitulé>Analyse prescriptive (AP)</Intitulé>
+            <Hétérogène>true</Hétérogène>
+            <ECTS>6</ECTS>
+            <ParCompétences>false</ParCompétences>
+            <Responsable>esquirol</Responsable>
+            <UEs>
+                <UE>
+                    <Intitulé>Transitoire : métaheuristique</Intitulé>
+                    <Coefficient>0.33</Coefficient>
+                    <ParCompétences>false</ParCompétences>
+                    <Responsable>huguet</Responsable>
+                    <HeuresCM>6.25</HeuresCM>
+                    <HeuresTD>0</HeuresTD>
+                    <HeuresTP>5.5</HeuresTP>
+                    <Épreuves>
+                        <Épreuve code="E1">
+                            <Intitulé>Contrôle</Intitulé>
+                            <Coefficient>1</Coefficient>
+                        </Épreuve>
+                    </Épreuves>
+                </UE>
+                <UE>
+                    <Intitulé>Méthodes et Outils</Intitulé>
+                    <Coefficient>0.33</Coefficient>
+                    <ParCompétences>false</ParCompétences>
+                    <Responsable>huguet</Responsable>
+                    <Responsable>esquirol</Responsable>
+                    <HeuresCM>20</HeuresCM>
+                    <HeuresTD>0</HeuresTD>
+                    <HeuresTP>13.75</HeuresTP>
+                    <Épreuves>
+                        <Épreuve code="E2">
+                            <Intitulé>Contrôle</Intitulé>
+                            <Coefficient>1</Coefficient>
+                        </Épreuve>
+                    </Épreuves>
+                </UE>
+                <UE>
+                    <Intitulé>Projet Analyse Prescriptive</Intitulé>
+                    <Coefficient>0.33</Coefficient>
+                    <ParCompétences>false</ParCompétences>
+                    <Responsable>huguet</Responsable>
+                    <Responsable>esquirol</Responsable>
+                    <HeuresCM>1.25</HeuresCM>
+                    <HeuresTD>0</HeuresTD>
+                    <HeuresTP>13.75</HeuresTP>
+                    <Épreuves>
+                        <Épreuve code="E3">
+                            <Intitulé>Contrôle</Intitulé>
+                            <Coefficient>1</Coefficient>
+                        </Épreuve>
+                    </Épreuves>
+                </UE>
+            </UEs>
+        </UFChoix>
+        <UFChoix code="I5IRRS12">
+            <Intitulé>Software-defined communication infrastructure (SDCI)</Intitulé>
+            <Hétérogène>true</Hétérogène>
+            <ECTS>6</ECTS>
+            <ParCompétences>false</ParCompétences>
+            <Responsable>chassot</Responsable>
+            <UEs>
+                <UE>
+                    <Intitulé>Virtualisation de fonctions de réseaux (SDN, NFV)</Intitulé>
+                    <Coefficient>0.5</Coefficient>
+                    <ParCompétences>false</ParCompétences>
+                    <Responsable>chassot</Responsable>
+                    <HeuresCM>6.25</HeuresCM>
+                    <HeuresTD>0</HeuresTD>
+                    <HeuresTP>13.75</HeuresTP>
+                    <Épreuves>
+                        <Épreuve code="E1">
+                            <Intitulé>Contrôle</Intitulé>
+                            <Coefficient>1</Coefficient>
+                        </Épreuve>
+                    </Épreuves>
+                </UE>
+                <UE>
+                    <Intitulé>Projet Gestion autonomique de propriétés non fonctionnelles dans une SDCI</Intitulé>
+                    <Coefficient>0.5</Coefficient>
+                    <ParCompétences>false</ParCompétences>
+                    <Responsable>abdellatif</Responsable>
+                    <HeuresCM>1.25</HeuresCM>
+                    <HeuresTD>5</HeuresTD>
+                    <HeuresTP>24.75</HeuresTP>
+                    <Épreuves>
+                        <Épreuve code="E2">
+                            <Intitulé>Contrôle</Intitulé>
+                            <Coefficient>1</Coefficient>
+                        </Épreuve>
+                    </Épreuves>
+                </UE>
+            </UEs>
+        </UFChoix>
+        <UFChoix code="I5IRRS41">
+            <Intitulé>Robotique de service (RdS)</Intitulé>
+            <Hétérogène>true</Hétérogène>
+            <ECTS>6</ECTS>
+            <ParCompétences>false</ParCompétences>
+            <Responsable>tondu</Responsable>
+            <UEs>
+                <UE>
+                    <Intitulé>Introduction à la robotique de service</Intitulé>
+                    <Coefficient>0.33</Coefficient>
+                    <ParCompétences>false</ParCompétences>
+                    <Responsable>tondu</Responsable>
+                    <HeuresCM>12.5</HeuresCM>
+                    <HeuresTD>7.5</HeuresTD>
+                    <HeuresTP>0</HeuresTP>
+                    <Épreuves>
+                        <Épreuve code="E1">
+                            <Intitulé>Contrôle</Intitulé>
+                            <Coefficient>1</Coefficient>
+                        </Épreuve>
+                    </Épreuves>
+                </UE>
+                <UE>
+                    <Intitulé>BE Robotique de service</Intitulé>
+                    <Coefficient>0.33</Coefficient>
+                    <ParCompétences>false</ParCompétences>
+                    <Responsable>tondu</Responsable>
+                    <HeuresCM>0</HeuresCM>
+                    <HeuresTD>0</HeuresTD>
+                    <HeuresTP>10</HeuresTP>
+                    <Épreuves>
+                        <Épreuve code="E2">
+                            <Intitulé>Contrôle</Intitulé>
+                            <Coefficient>1</Coefficient>
+                        </Épreuve>
+                    </Épreuves>
+                </UE>
+                <UE>
+                    <Intitulé>BE Robotique humanoide</Intitulé>
+                    <Coefficient>0.33</Coefficient>
+                    <ParCompétences>false</ParCompétences>
+                    <Responsable>tondu</Responsable>
+                    <HeuresCM>0</HeuresCM>
+                    <HeuresTD>20</HeuresTD>
+                    <HeuresTP>0</HeuresTP>
+                    <Épreuves>
+                        <Épreuve code="E3">
+                            <Intitulé>Oral/Ecrit</Intitulé>
+                            <Coefficient>1</Coefficient>
+                        </Épreuve>
+                    </Épreuves>
+                </UE>
+            </UEs>
+        </UFChoix>
+    </UFs>
+
+</Maquette>

@@ -13,8 +13,10 @@ print_yellow () {
 validate () {
 	xmllint --noout $1 --schema $2
 	if (( $? != 0 )); then
-		echo
-		print_red "Failed to validate $1 data.\n"
+		if [[ VERBOSEMODE == 1 ]]; then
+			echo
+			print_red "Failed to validate $1 data.\n"
+		fi
 		exit 1
 	fi
 }
@@ -22,49 +24,84 @@ validate () {
 apply_template () {
 	xsltproc -o $3 $1 $2
 	if (( $? != 0 )); then
-		echo
-		print_red "Failed to apply template $1 to $2.\n"
+		if [[ VERBOSEMODE == 1 ]]; then
+			echo
+			print_red "Failed to apply template $1 to $2.\n"
+		fi
 		exit 1
 	fi
 }
 
-if (( $# != 2 )); then
+if (( $# != 3 )); then
 	echo "Usage :" $0 "<maquette data file> <compiled output file>"
 	exit 1
 fi
 
-echo
+
+VERBOSEMODE=1
+
+if [[ $1 == "-q" ]]; then
+	VERBOSEMODE=0
+fi
+if [[ $1 == "-v" ]]; then
+	VERBOSEMODE=1
+fi
 
 # Validate data files
-print_yellow "** Validating data files **\n"
+if [[ VERBOSEMODE == 1 ]]; then
+	echo
+	print_yellow "** Validating data files **\n"
+fi
+
 validate xml/departements.xml schemas/departements.xsd
 validate xml/grandsDomaines.xml schemas/grandsDomaines.xsd
 validate xml/personnels.xml schemas/personnels.xsd
 validate xml/promos.xml	schemas/promos.xsd
-echo
 
 # Validate input maquette file
-print_yellow "** Validating input maquette file **\n"
-validate $1 schemas/maquette.xsd
-echo
+if [[ VERBOSEMODE == 1 ]]; then
+	echo
+	print_yellow "** Validating input maquette file **\n"
+fi
+
+validate $2 schemas/maquette.xsd
+
+if [[ VERBOSEMODE == 1 ]]; then
+	echo
+fi
 
 
 # Compile input maquette file into a tmp file
 tmp=`mktemp`
-print_yellow "** Compiling data files and maquette file into $tmp **\n"
-apply_template templates/compile.xsl $1 $tmp
+if [[ VERBOSEMODE == 1 ]]; then
+	print_yellow "** Compiling data files and maquette file into $tmp **\n"
+fi
+apply_template templates/compile.xsl $2 $tmp
 validate $tmp schemas/compile.xsd
-echo
+
+if [[ VERBOSEMODE == 1 ]]; then
+	echo
+fi
 
 # Convert compiled file to html in the output file
-print_yellow "** Converting compiled file to html format **\n"
-apply_template templates/tohtml.xsl $tmp $2
-echo
+if [[ VERBOSEMODE == 1 ]]; then
+	print_yellow "** Converting compiled file to html format **\n"
+fi
+apply_template templates/tohtml.xsl $tmp $3
+
+if [[ VERBOSEMODE == 1 ]]; then
+	echo
+fi
 
 # Remove temp file
-print_yellow "** Cleaning **\n"
+if [[ VERBOSEMODE == 1 ]]; then
+	print_yellow "** Cleaning **\n"
+fi
 rm $tmp
-echo
 
-print_green "$1 has successfully been converted to $2\n"
+if [[ VERBOSEMODE == 1 ]]; then
+	echo
+fi
+
+print_green "$2 has successfully been converted to $3\n"
 echo
