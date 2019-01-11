@@ -34,8 +34,10 @@
           <td>Par Notes</td>
         </xsl:otherwise>
       </xsl:choose>
-      <td><xsl:value-of select="r:Responsable"/></td>
-      <td><xsl:value-of select="r:root/r:Personnels/r:Personnel[@id=r:Responsable]/r:Nom"/></td>
+      <xsl:variable name="idResp">
+        <xsl:value-of select="r:Responsable"/>
+      </xsl:variable>
+      <td><xsl:value-of select="/*[local-name()='root']/*[local-name()='Personnels']/*[local-name()='Personnel' and @*[local-name()='id']=$idResp]/*[local-name()='Prénom']"/> <xsl:text> </xsl:text> <xsl:value-of select="/*[local-name()='root']/*[local-name()='Personnels']/*[local-name()='Personnel' and @*[local-name()='id']=$idResp]/*[local-name()='Nom']"/></td>
       <td><xsl:value-of select="sum(r:UEs/r:UE/r:HeuresCM)"/></td>
       <td><xsl:value-of select="sum(r:UEs/r:UE/r:HeuresTD)"/></td>
       <td><xsl:value-of select="sum(r:UEs/r:UE/r:HeuresTP)"/></td>
@@ -56,7 +58,7 @@
         </xsl:choose>
       </xsl:variable> -->
 
-      <xsl:element name="tr"><xsl:attribute name="id"><xsl:value-of select="@code"/></xsl:attribute>  <!-- TODO Le @code n'est pas récupéré ici need help -->
+      <xsl:element name="tr"><xsl:attribute name="id"></xsl:attribute>
         <td class="ufcontent"></td>
         <td class="ufcontent"><xsl:value-of select="r:Intitulé"/></td>
         <td class="ufcontent"><xsl:value-of select="r:ECTS"/></td>
@@ -76,8 +78,10 @@
             <td class="ufcontent">Par Notes</td>
           </xsl:otherwise>
         </xsl:choose>
-        <!-- <td><xsl:value-of select="r:root/r:Personnels/r:Personnel[@id=r:Responsable]/r:Nom"/></td> -->
-        <td class="ufcontent"><xsl:value-of select="r:Responsable"/></td>
+        <xsl:variable name="idRespUE">
+          <xsl:value-of select="r:Responsable"/>
+        </xsl:variable>
+        <td><xsl:value-of select="/*[local-name()='root']/*[local-name()='Personnels']/*[local-name()='Personnel' and @*[local-name()='id']=$idRespUE]/*[local-name()='Prénom']"/><xsl:text> </xsl:text><xsl:value-of select="/*[local-name()='root']/*[local-name()='Personnels']/*[local-name()='Personnel' and @*[local-name()='id']=$idRespUE]/*[local-name()='Nom']"/></td>
         <td class="ufcontent"><xsl:value-of select="r:HeuresCM"/></td>
         <td class="ufcontent"><xsl:value-of select="r:HeuresTD"/></td>
         <td class="ufcontent"><xsl:value-of select="r:HeuresTP"/></td>
