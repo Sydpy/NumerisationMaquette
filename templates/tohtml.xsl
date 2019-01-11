@@ -47,17 +47,6 @@
       <td></td>
     </tr>
     <xsl:for-each select="r:UEs/r:UE">
-      <!-- <xsl:variable name="countEpreuves">
-        <xsl:choose>
-          <xsl:when test="count(r:Épreuves/r:Épreuve)=0">
-            <xsl:value-of select="count(r:Épreuves/r:Épreuve)"/>
-          </xsl:when>
-          <xsl:otherwise>
-            <xsl:value-of select="count(r:Épreuves/r:Épreuve)"/>
-          </xsl:otherwise>
-        </xsl:choose>
-      </xsl:variable> -->
-
       <xsl:element name="tr"><xsl:attribute name="id"></xsl:attribute>
         <td class="ufcontent"></td>
         <td class="ufcontent"><xsl:value-of select="r:Intitulé"/></td>
@@ -86,12 +75,7 @@
         <td class="ufcontent"><xsl:value-of select="r:HeuresTD"/></td>
         <td class="ufcontent"><xsl:value-of select="r:HeuresTP"/></td>
         <td class="ufcontent"><xsl:value-of select="r:HeuresCM + r:HeuresTD + r:HeuresTP"/></td>
-        <!-- <td rowspan="{$countEpreuves}"><xsl:value-of select="r:Coefficient"/></td> -->
         <td class="ufcontent"><xsl:value-of select="r:Coefficient"/></td>
-        <!-- <td><xsl:value-of select="r:Épreuves/r:Épreuve/@code"/></td>
-        <td><xsl:value-of select="r:Épreuves/r:Épreuve/r:Intitulé"/></td>
-        <td><xsl:value-of select="r:Épreuves/r:Épreuve/r:Coefficient"/></td> -->
-      <!-- </tr> -->
         <td class="ufcontent">
             <ul>
               <xsl:for-each select="r:Épreuves/r:Épreuve">
@@ -168,11 +152,8 @@
           </tr>
           <tr>
             <th rowspan="{$countUFObligatoire}">UF obligatoire</th>
-            <!-- <th>Intitulé</th>
-            <th>Code</th> -->
           </tr>
           <xsl:for-each select="r:root/r:Maquette/r:UFs/r:UFObligatoire">
-            <!-- <xsl:variable name = "Resp" select="r:Responsable" /> -->
             <xsl:call-template name="ufcontent"/>
           </xsl:for-each>
           <tr>
